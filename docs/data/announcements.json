@@ -1,0 +1,23 @@
+{
+  "$schema": "ebsafe.announcements/v1",
+  "posts": [
+    {
+      "id": "post_welcome",
+      "title": "Welcome to e B-SAFE",
+      "body": "Explore the lessons and learn how to help create a respectful school community.",
+      "label": "Welcome message",
+      "publishedAt": "2026-01-05",
+      "pinned": true,
+      "published": true
+    },
+    {
+      "id": "post_kindness",
+      "title": "Choose kindness every day",
+      "body": "Small actions can help classmates feel included, respected, and supported.",
+      "label": "Student reminder",
+      "publishedAt": "2026-01-06",
+      "pinned": false,
+      "published": true
+    }
+  ]
+}

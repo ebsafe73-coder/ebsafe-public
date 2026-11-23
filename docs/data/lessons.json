@@ -1,0 +1,216 @@
+{
+  "$schema": "ebsafe.lessons/v1",
+  "lessons": [
+    {
+      "id": "emotional-video",
+      "title": "Psychological / Emotional Bullying",
+      "description": "A short video on emotional harm and getting support.",
+      "longDescription": "Watch a short video on psychological and emotional bullying, then read the key points below. Repeated intimidation, humiliation, or threats can hurt even when there are no visible injuries.",
+      "category": "Psychological / Emotional",
+      "thumbnail": {
+        "class": "thumb-rose",
+        "symbol": "heart",
+        "label": "Emotional bullying"
+      },
+      "videoUrl": "assets/videos/emotional-bullying.mp4",
+      "poster": "assets/posters/emotional-bullying.jpg",
+      "captionsPath": "",
+      "duration": "Short video",
+      "durationSeconds": 24,
+      "audience": "Grade 7 friendly",
+      "featured": true,
+      "learningObjectives": [
+        "Recognize psychological and emotional bullying: repeated intimidation, humiliation, threats, and coercion.",
+        "Understand how this harm affects a student even when there are no visible injuries.",
+        "Name safe steps: do not blame the person, encourage them to tell a trusted adult, and seek Guidance Office support."
+      ],
+      "keyTakeaways": [
+        "Emotional harm is real harm, and it deserves to be taken seriously.",
+        "Bullying is never the victim's fault, and no one has to face it alone.",
+        "Tell a trusted adult or the Guidance Office. Support is available."
+      ],
+      "transcript": "",
+      "related": [
+        "bystander",
+        "intro"
+      ],
+      "published": true,
+      "createdAt": "2026-11-13"
+    },
+    {
+      "id": "social-video",
+      "title": "Social / Relational Bullying",
+      "description": "A short video on exclusion, rumors, and belonging.",
+      "longDescription": "Watch a short video on social and relational bullying, then read the key points below. Social bullying harms friendships and a sense of belonging, and that harm is real.",
+      "category": "Social / Relational",
+      "thumbnail": {
+        "class": "thumb-green",
+        "symbol": "users",
+        "label": "Social bullying"
+      },
+      "videoUrl": "assets/videos/social-bullying.mp4",
+      "poster": "assets/posters/social-bullying.jpg",
+      "captionsPath": "",
+      "duration": "Short video",
+      "durationSeconds": 10,
+      "audience": "Grade 7 friendly",
+      "featured": false,
+      "learningObjectives": [
+        "Recognize social bullying: deliberate exclusion, spreading rumors, and turning a group against someone.",
+        "Explain why leaving someone out on purpose is bullying, even when nothing physical happens.",
+        "Name safe steps: include the person, refuse to spread rumors, and tell a trusted adult."
+      ],
+      "keyTakeaways": [
+        "Social and relational bullying harms belonging and friendships. It is real harm.",
+        "Do not spread rumors or join a group that is targeting someone.",
+        "Include others, and tell a trusted adult when it continues."
+      ],
+      "transcript": "",
+      "related": [
+        "bystander",
+        "intro"
+      ],
+      "published": true,
+      "createdAt": "2026-11-13"
+    },
+    {
+      "id": "physical-video",
+      "title": "Physical Bullying",
+      "description": "A short video showing what physical bullying looks like and what to do.",
+      "longDescription": "Watch a short video on physical bullying, then read the key points below. Physical bullying uses physical actions to hurt, intimidate, or frighten another person.",
+      "category": "Physical Bullying",
+      "thumbnail": {
+        "class": "thumb-peach",
+        "symbol": "hand",
+        "label": "Physical bullying"
+      },
+      "videoUrl": "assets/videos/physical-bullying.mp4",
+      "poster": "assets/posters/physical-bullying.jpg",
+      "captionsPath": "",
+      "duration": "Short video",
+      "durationSeconds": 5,
+      "audience": "Grade 7 friendly",
+      "featured": false,
+      "learningObjectives": [
+        "Recognize what physical bullying looks like at school.",
+        "Explain why safety comes first and why you should not physically intervene.",
+        "Name the adults or offices you can tell when it happens."
+      ],
+      "keyTakeaways": [
+        "Physical bullying is repeated physical harm or intimidation; it is never acceptable.",
+        "Do not fight back or put yourself at risk — move to a safe place and get help.",
+        "Report it to a teacher, adviser, or the Guidance Office."
+      ],
+      "transcript": "",
+      "related": [
+        "intro"
+      ],
+      "published": true,
+      "createdAt": "2026-11-12"
+    },
+    {
+      "id": "intro",
+      "title": "What is bullying?",
+      "description": "Learn the basics and recognize harmful behavior.",
+      "longDescription": "Learn how to recognize bullying, why it matters, and how to respond safely when you see it.",
+      "category": "Bullying Basics",
+      "thumbnail": {
+        "class": "thumb-green",
+        "symbol": "book-open",
+        "label": "Awareness"
+      },
+      "videoUrl": "",
+      "captionsPath": "",
+      "duration": "Short lesson",
+      "audience": "Grade 7 friendly",
+      "featured": false,
+      "learningObjectives": [
+        "Explain what bullying is and why repetition and power imbalance matter.",
+        "Recognize the most common forms of bullying.",
+        "Describe a safe first step when bullying happens."
+      ],
+      "keyTakeaways": [
+        "Bullying is repeated harmful behavior; not every disagreement is bullying.",
+        "Everyone deserves respect, safety, and support.",
+        "Telling a trusted adult is a strong and safe step."
+      ],
+      "transcript": "",
+      "related": [
+        "bystander",
+        "online"
+      ],
+      "published": true,
+      "createdAt": "2026-01-05"
+    },
+    {
+      "id": "bystander",
+      "title": "Being a helpful bystander",
+      "description": "Safe ways to support someone who is being bullied.",
+      "longDescription": "Bystanders can make a difference without putting themselves in danger. Learn safe ways to support a classmate.",
+      "category": "Prevention",
+      "thumbnail": {
+        "class": "thumb-blue",
+        "symbol": "handshake",
+        "label": "Be an ally"
+      },
+      "videoUrl": "",
+      "captionsPath": "",
+      "duration": "Short lesson",
+      "audience": "Grade 7 friendly",
+      "featured": false,
+      "learningObjectives": [
+        "Identify safe ways to support a classmate who is being bullied.",
+        "Explain why joining in or forwarding harmful content makes things worse.",
+        "Name adults or offices that can help."
+      ],
+      "keyTakeaways": [
+        "Do not join in, laugh along, or share harmful content.",
+        "Support the person and include them.",
+        "Tell a trusted adult when you see repeated harm."
+      ],
+      "transcript": "",
+      "related": [
+        "intro",
+        "physical-video",
+        "social-video",
+        "emotional-video"
+      ],
+      "published": true,
+      "createdAt": "2026-01-06"
+    },
+    {
+      "id": "online",
+      "title": "Staying safe online",
+      "description": "Think before you post, share, comment, or forward.",
+      "longDescription": "Cyberbullying can follow students beyond school hours. Learn simple online safety habits and how to respond safely.",
+      "category": "Cyberbullying",
+      "thumbnail": {
+        "class": "thumb-peach",
+        "symbol": "smartphone",
+        "label": "Online safety"
+      },
+      "videoUrl": "",
+      "captionsPath": "",
+      "duration": "Short lesson",
+      "audience": "Grade 7 friendly",
+      "featured": false,
+      "learningObjectives": [
+        "Describe what cyberbullying looks like.",
+        "Apply simple rules before posting or forwarding content.",
+        "Explain how to save evidence and seek help safely."
+      ],
+      "keyTakeaways": [
+        "Pause before posting or forwarding hurtful content.",
+        "Protect your personal information and use privacy tools.",
+        "Block, report, and tell a trusted adult when it is safe to do so."
+      ],
+      "transcript": "",
+      "related": [
+        "intro",
+        "bystander"
+      ],
+      "published": true,
+      "createdAt": "2026-01-07"
+    }
+  ]
+}

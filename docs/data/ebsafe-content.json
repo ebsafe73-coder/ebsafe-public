@@ -1,0 +1,24 @@
+{
+  "$schema": "ebsafe.content/v1",
+  "systemName": "e B-SAFE",
+  "systemFullName": "Electronic Bullying Safety and Awareness System",
+  "contentVersion": "1.0.0",
+  "lastUpdated": "2026-11-22",
+  "description": "Content manifest for the e B-SAFE website. The app loads every file listed under 'files' at startup. Edit a file directly, or use the school's local teacher workspace to prepare changes for the website maintainer.",
+  "files": {
+    "settings": "data/settings.json",
+    "schoolInfo": "data/school-info.json",
+    "topics": "data/topics.json",
+    "lessons": "data/lessons.json",
+    "quizzes": "data/quizzes.json",
+    "announcements": "data/announcements.json",
+    "handbook": "data/handbook.json",
+    "survey": "data/survey-questions.json",
+    "extras": "data/extras.json"
+  },
+  "notes": [
+    "All content files must be valid JSON. The local workspace checks a file before the website maintainer publishes it.",
+    "Student survey and evaluation responses, plus learning progress, are stored only in the current browser and can be exported as separate JSON response files.",
+    "Do not put private student information, credentials, or real incident reports into these content files."
+  ]
+}

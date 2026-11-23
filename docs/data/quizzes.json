@@ -1,0 +1,214 @@
+{
+  "$schema": "ebsafe.quizzes/v1",
+  "quiz": {
+    "title": "Quick awareness quiz",
+    "intro": "Answer one question at a time. You will see a short explanation after you answer.",
+    "questions": [
+      {
+        "id": "q1",
+        "topicId": "cyberbullying",
+        "type": "multiple-choice",
+        "question": "Which situation is an example of cyberbullying?",
+        "options": [
+          "A classmate asks to borrow a pencil.",
+          "Someone repeatedly posts hurtful messages about a classmate online.",
+          "A friend disagrees with your favorite game."
+        ],
+        "answer": 1,
+        "explanation": "Cyberbullying involves harmful behavior using digital tools, such as repeated hurtful messages or posts."
+      },
+      {
+        "id": "q2",
+        "topicId": "prevention",
+        "type": "multiple-choice",
+        "question": "You see someone being bullied. What is a safer response?",
+        "options": [
+          "Join in so you fit in.",
+          "Forward the post to more people.",
+          "Get help from a trusted adult and support the person safely."
+        ],
+        "answer": 2,
+        "explanation": "Do not join in or spread harmful content. A trusted adult can help, and you should not put yourself in danger."
+      },
+      {
+        "id": "q3",
+        "topicId": "identification",
+        "type": "multiple-choice",
+        "question": "What should you do if you are unsure whether something is bullying?",
+        "options": [
+          "Ignore all concerns.",
+          "Ask a trusted adult for guidance.",
+          "Post about the person publicly."
+        ],
+        "answer": 1,
+        "explanation": "Context matters. A trusted adult can help you assess the situation and choose a safe next step."
+      },
+      {
+        "id": "q4",
+        "topicId": "prevention",
+        "type": "multiple-choice",
+        "question": "Which action can help prevent bullying?",
+        "options": [
+          "Use respectful language and include others.",
+          "Laugh when someone is targeted.",
+          "Share a hurtful rumor."
+        ],
+        "answer": 0,
+        "explanation": "Respect, inclusion, and not spreading rumors help create a safer school community."
+      },
+      {
+        "id": "q5",
+        "topicId": "reporting",
+        "type": "multiple-choice",
+        "question": "Who can a student approach to report a concern?",
+        "options": [
+          "Only a random online account.",
+          "A trusted adult or the school's approved reporting contact.",
+          "No one, ever."
+        ],
+        "answer": 1,
+        "explanation": "Students can seek help from a trusted adult, class adviser, Guidance Office, or another verified school contact."
+      },
+      {
+        "id": "q6",
+        "topicId": "identification",
+        "type": "true-false",
+        "question": "Bullying is always just a one-time disagreement between friends.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 1,
+        "explanation": "Bullying usually involves repeated harmful behavior and a power imbalance. A single disagreement is not automatically bullying."
+      },
+      {
+        "id": "q7",
+        "topicId": "reporting",
+        "type": "true-false",
+        "question": "You can ask a trusted adult for help even if you are not sure the behavior is bullying.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 0,
+        "explanation": "Trusted adults can help you assess the situation and choose a safe next step, even when you are unsure."
+      },
+      {
+        "id": "q8",
+        "topicId": "reporting",
+        "type": "scenario",
+        "question": "SCENARIO: A classmate keeps receiving hurtful comments on her photos. She asks you not to tell anyone. What is the safest response?",
+        "options": [
+          "Keep the secret and do nothing.",
+          "Encourage her to talk to a trusted adult, and offer to go with her.",
+          "Comment back angrily at the people writing them."
+        ],
+        "answer": 1,
+        "explanation": "You can be a good friend without joining the harm. Encourage her to tell a trusted adult and offer support; adults can act while respecting her privacy."
+      },
+      {
+        "id": "q9",
+        "topicId": "prevention",
+        "type": "scenario",
+        "question": "SCENARIO: You realize you laughed at a hurtful joke about a classmate yesterday. What is a good next step now?",
+        "options": [
+          "Say nothing. It is over now anyway.",
+          "Apologize to the classmate, stop laughing next time, and speak up safely.",
+          "Blame the person who told the joke."
+        ],
+        "answer": 1,
+        "explanation": "Taking responsibility and changing the behavior helps repair the harm. Laughing along is still joining in, and it is never too late to choose kindness."
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "scenario-chat",
+      "title": "What would you do?",
+      "prompt": "You see a hurtful message about a classmate being shared in a group chat. What is a helpful next step?",
+      "options": [
+        {
+          "text": "Forward it to more friends.",
+          "correct": false,
+          "feedback": "Sharing or adding to the hurtful content can spread the harm. A safer choice is to avoid forwarding it, support the classmate, and tell a trusted adult."
+        },
+        {
+          "text": "Don't share it; support the classmate and tell a trusted adult.",
+          "correct": true,
+          "feedback": "Good choice. Do not forward hurtful content. Support your classmate safely and tell a trusted adult."
+        },
+        {
+          "text": "Add another hurtful comment.",
+          "correct": false,
+          "feedback": "Adding to the hurtful content makes the harm worse. A safer choice is to avoid forwarding it, support the classmate, and tell a trusted adult."
+        }
+      ]
+    },
+    {
+      "id": "scenario-exclusion",
+      "title": "What would you do?",
+      "prompt": "At lunch, the same group of classmates always sits together, and one classmate is never invited. What is a helpful next step?",
+      "options": [
+        {
+          "text": "Ignore it. It is not your business.",
+          "correct": false,
+          "feedback": "Exclusion that keeps hurting someone is a form of bullying. Ignoring it lets the harm continue. A safer step is to include the classmate yourself or tell a trusted adult."
+        },
+        {
+          "text": "Invite the classmate to sit with you, or join them if you are also new.",
+          "correct": true,
+          "feedback": "Good choice. Including someone is one of the simplest and strongest ways to prevent bullying."
+        },
+        {
+          "text": "Tell the group in front of everyone that they are mean.",
+          "correct": false,
+          "feedback": "Public confrontation can make the situation worse and put you in the middle. A safer step is to include the classmate and tell a trusted adult if it continues."
+        }
+      ]
+    },
+    {
+      "id": "scenario-physical",
+      "title": "What would you do?",
+      "prompt": "During recess, you see a classmate being pushed while others laugh. What should you do?",
+      "options": [
+        {
+          "text": "Record it on your phone to show what happened later.",
+          "correct": false,
+          "feedback": "Recording can spread the harm and embarrass the classmate further. Never share it. Move to safety and get an adult right away."
+        },
+        {
+          "text": "Join the group so they do not target you next.",
+          "correct": false,
+          "feedback": "Joining in makes you part of the harm. Safety first: step away and find a teacher or another trusted adult immediately."
+        },
+        {
+          "text": "Move to a safe distance and find a teacher or another trusted adult right away.",
+          "correct": true,
+          "feedback": "Good choice. Do not physically intervene if it could put you at risk. Getting an adult quickly is the safest and most helpful action."
+        }
+      ]
+    },
+    {
+      "id": "scenario-rumor",
+      "title": "What would you do?",
+      "prompt": "A classmate asks you to forward a rumor about another student to the class group chat. What is a safe response?",
+      "options": [
+        {
+          "text": "Forward it. Everyone is already talking about it anyway.",
+          "correct": false,
+          "feedback": "Forwarding spreads the harm wider, even if you did not start it. Do not pass it on."
+        },
+        {
+          "text": "Say no, do not forward it, and tell a trusted adult if it continues.",
+          "correct": true,
+          "feedback": "Good choice. Stopping the chain and telling an adult protects the classmate and keeps you safe."
+        },
+        {
+          "text": "Post a public correction and tag the classmate involved.",
+          "correct": false,
+          "feedback": "Public posts about a classmate can add embarrassment and spread the issue further. Say no privately and tell a trusted adult."
+        }
+      ]
+    }
+  ]
+}

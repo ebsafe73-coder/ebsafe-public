@@ -1,0 +1,130 @@
+{
+  "$schema": "ebsafe.extras/v1",
+  "note": "Interactive extras: kindness pledge, myth vs. fact cards, learning tips, FAQ, and the awareness accordions (effects of bullying, consequences for students who bully). All content is school-appropriate and editable in the Admin Content Manager.",
+  "awarenessExtra": [
+    {
+      "id": "effects",
+      "icon": "heart-pulse",
+      "eyebrow": "What bullying can do",
+      "title": "Effects of Bullying on Students",
+      "intro": "Bullying does not only hurt at the moment it happens. Students who are bullied again and again can carry these effects for a long time. Open a card to see what it can look like.",
+      "note": "General educational content that supports the topic cards above. The school should review the exact wording before publication.",
+      "items": [
+        { "icon": "heart", "title": "Low Self-Esteem", "text": "A student may start to believe the hurtful things said about them and feel that they are not good enough." },
+        { "icon": "shield-alert", "title": "Anxiety and Fear", "text": "Feeling nervous or afraid of going to class, joining activities, or being near the person who hurts them." },
+        { "icon": "cloud-rain", "title": "Depression and Sadness", "text": "Ongoing sadness, crying, or losing interest in things that used to feel enjoyable." },
+        { "icon": "book-open", "title": "Poor Academic Performance", "text": "Trouble concentrating in class or studying at home, so schoolwork and grades may go down." },
+        { "icon": "users", "title": "Social Isolation", "text": "Being left out of groups and activities, or staying alone because it feels safer." },
+        { "icon": "user-round", "title": "Loss of Confidence", "text": "Losing trust in their own ideas and abilities, and no longer joining recitations, clubs, or group work." },
+        { "icon": "handshake", "title": "Difficulty Trusting Others", "text": "Finding it hard to believe that classmates or even adults will help or keep them safe." },
+        { "icon": "calendar-x", "title": "Absenteeism", "text": "Missing school days, coming late, or looking for excuses to stay home to avoid the bullying." },
+        { "icon": "brain", "title": "Emotional Problems", "text": "Bottled-up anger, shame, or sudden mood changes that are hard for the student to explain." },
+        { "icon": "heart-handshake", "title": "Difficulty Building Relationships", "text": "Keeping distance from other people, which makes friendships harder to start or to keep." }
+      ]
+    },
+    {
+      "id": "consequences",
+      "icon": "shield-alert",
+      "eyebrow": "Why bullying must stop",
+      "title": "Consequences for Students Who Repeatedly Bully Other Students",
+      "intro": "Bullying is a choice, and choices have results. These are the consequences a student can face when hurtful behavior continues over time.",
+      "note": "General educational content about school discipline and its effects. The school should review the exact wording, and use its own approved disciplinary rules, before publication.",
+      "items": [
+        { "icon": "school", "title": "School Disciplinary Actions", "text": "Breaking school rules against bullying can lead to warnings, parent conferences, or heavier penalties under the school's disciplinary rules." },
+        { "icon": "user-minus", "title": "Loss of Respect", "text": "Classmates, teachers, and family may lose respect and trust when someone keeps hurting other people." },
+        { "icon": "users", "title": "Damaged Relationships", "text": "Friends and classmates may pull away, and friendships that mattered can end." },
+        { "icon": "message-circle-warning", "title": "Negative Reputation", "text": "Being known as someone who bullies can follow a student and change how others treat them." },
+        { "icon": "user-x", "title": "Difficulty Making Friends", "text": "Other students avoid getting close when they are afraid the same behavior will happen to them." },
+        { "icon": "graduation-cap", "title": "Academic Consequences", "text": "Lessons missed because of discipline cases, and a record that can affect school activities and opportunities." },
+        { "icon": "heart", "title": "Lack of Empathy", "text": "People who keep hurting others can stop noticing how other people feel, which makes it harder for them to change." },
+        { "icon": "scale", "title": "Possible Legal Consequences", "text": "Serious or repeated bullying, including online bullying, can have legal consequences under school policies and Philippine law." }
+      ]
+    }
+  ],
+  "pledge": {
+    "title": "My Digital Kindness Pledge",
+    "intro": "I promise to help keep our school safe and respectful. I will:",
+    "lines": [
+      "Use kind and respectful words, online and in school.",
+      "Never post, forward, or comment on content that is meant to hurt someone.",
+      "Include classmates instead of leaving them out.",
+      "Stand up safely for others, and ask a trusted adult for help.",
+      "Think before I click, post, or share.",
+      "Treat every classmate the way I want to be treated."
+    ],
+    "closing": "Signed with my word of honor."
+  },
+  "myths": [
+    {
+      "myth": "Bullying is just a normal part of growing up.",
+      "fact": "Bullying is harmful, and it is preventable.",
+      "explanation": "Repeated harm can affect a student's health, studies, and confidence. Schools are expected to take bullying seriously."
+    },
+    {
+      "myth": "Only boys are involved in bullying, and only physical harm counts.",
+      "fact": "Bullying takes many forms, and anyone can be involved.",
+      "explanation": "Verbal, physical, cyber, social, and emotional bullying all cause real harm, and all of them can be reported."
+    },
+    {
+      "myth": "If you are being bullied, you should just ignore it.",
+      "fact": "Telling a trusted adult is a strong, safe step.",
+      "explanation": "Repeated bullying rarely stops on its own. A trusted adult can help protect you and change what is happening."
+    },
+    {
+      "myth": "Reporting a concern only makes things worse.",
+      "fact": "School procedures exist to protect students.",
+      "explanation": "A class adviser, the Guidance Office, or another trusted adult can act while keeping your concern as private as school policy allows."
+    },
+    {
+      "myth": "People who bully are always strangers online.",
+      "fact": "Bullying often comes from people the learner already knows.",
+      "explanation": "Classmates, friends, and acquaintances can be involved, whether it happens in person or online."
+    },
+    {
+      "myth": "It is not really bullying if it happens online.",
+      "fact": "Cyberbullying is bullying.",
+      "explanation": "Hurtful messages, posts, and deliberate exclusion online cause the same kind of harm, and they can be reported."
+    }
+  ],
+  "tips": [
+    "If a message makes you angry, wait before replying. You can always respond later.",
+    "If you are being bullied online, save evidence first (screenshots), then talk to a trusted adult.",
+    "Sit with someone who is eating alone. Inclusion is prevention.",
+    "Laughing along is still joining in. Practice saying nothing, or changing the subject.",
+    "Ask a classmate how they are doing. Kindness grows when it is noticed.",
+    "Check your privacy settings today. Only people you trust should see your posts.",
+    "If you are not sure whether something is bullying, ask a trusted adult.",
+    "Being kind online is the same as being kind in person.",
+    "When you see someone left out, invite them in.",
+    "Telling an adult is not snitching. It is keeping people safe."
+  ],
+  "faq": [
+    {
+      "group": "About bullying",
+      "items": [
+        { "q": "What is bullying?", "a": "It is repeated harmful behavior that hurts, embarrasses, or threatens someone. It can be words, actions, deliberate exclusion, or behavior online." },
+        { "q": "Is a single argument bullying?", "a": "Not automatically. Bullying usually involves repeated behavior and a power imbalance. When you are unsure, ask a trusted adult for guidance." },
+        { "q": "Can bullying happen online?", "a": "Yes. Hurtful messages, embarrassing posts, group-chat exclusion, and sharing private content without permission are cyberbullying." },
+        { "q": "What are the forms of bullying?", "a": "Verbal, physical, cyber, social or relational, and psychological or emotional. The Awareness section explains each one, with examples and signs." }
+      ]
+    },
+    {
+      "group": "Asking for help",
+      "items": [
+        { "q": "Who can I talk to?", "a": "A class adviser, a teacher, the Guidance Office, a parent, or any trusted adult. The Report section shows the school's approved steps." },
+        { "q": "Will I get in trouble if I report?", "a": "Reporting is not a punishment. School procedures exist to protect students; the school's policy explains who handles a concern and how." },
+        { "q": "What should I bring when I report?", "a": "What happened, when and where it happened, and any evidence such as screenshots. Writing it down first can help you explain clearly." },
+        { "q": "Is the concern form on this site sent to the school?", "a": "No. It is a demonstration that shows the layout only. Please talk to a trusted adult or the Guidance Office directly." }
+      ]
+    },
+    {
+      "group": "Using e B-SAFE",
+      "items": [
+        { "q": "Do I need an account to use the website?", "a": "No. The site works without a login, and your learning progress is kept only in this browser." },
+        { "q": "Where should I start?", "a": "Select Start Learning in the banner to open the video lessons, or open the Awareness section to learn about each form of bullying." },
+        { "q": "Can I print anything?", "a": "Yes. Handbook pages, the kindness pledge, and the certificate are print-friendly. Use your browser's Print option." },
+        { "q": "Why does a lesson show no video?", "a": "Videos are added by the school. When a lesson has no approved video yet, the player says so honestly instead of pretending." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "$schema": "ebsafe.topics/v1",
+  "topics": [
+    {
+      "id": "verbal",
+      "name": "Verbal Bullying",
+      "tag": "Words matter",
+      "colorClass": "topic-verbal",
+      "icon": "message-circle",
+      "cardText": "Words can hurt. Choose kindness.",
+      "definition": "Verbal bullying involves hurtful words or spoken behavior used repeatedly to upset, threaten, or humiliate someone.",
+      "examples": [
+        "Repeated name-calling or mocking a classmate.",
+        "Teasing someone about their body, family, or background.",
+        "Threatening or intimidating words."
+      ],
+      "signs": "Repeated insults, name-calling, mocking, hurtful teasing, or threats that target a person.",
+      "effects": [
+        "Feeling sad, anxious, or embarrassed.",
+        "Losing confidence or avoiding class participation.",
+        "Not wanting to attend school."
+      ],
+      "prevention": "Use respectful language, think before speaking, and speak up safely when words are being used to hurt someone.",
+      "responses": "Do not join in or laugh along. If it is safe, show support and tell a trusted adult about what happened.",
+      "seekHelp": [
+        "Tell a trusted adult such as your class adviser or the Guidance Office.",
+        "Keep a record of what happened if the behavior continues."
+      ],
+      "relatedLessons": [
+        "intro"
+      ],
+      "relatedHandbook": "behavior"
+    },
+    {
+      "id": "physical",
+      "name": "Physical Bullying",
+      "tag": "Respect boundaries",
+      "colorClass": "topic-physical",
+      "icon": "hand",
+      "cardText": "Hands are not for hurting.",
+      "definition": "Physical bullying uses physical actions to hurt, intimidate, or frighten another person.",
+      "examples": [
+        "Repeated pushing, hitting, or kicking.",
+        "Damaging or hiding someone's belongings.",
+        "Blocking or trapping someone to frighten them."
+      ],
+      "signs": "Repeated hitting, pushing, kicking, damaging belongings, or physical intimidation.",
+      "effects": [
+        "Bruises, injuries, or damaged belongings.",
+        "Fear of going to certain places at school.",
+        "Feeling unsafe or always on guard."
+      ],
+      "prevention": "Respect personal space and belongings. Report unsafe behavior and ask adults for help early.",
+      "responses": "Prioritize safety. Do not physically intervene if it could put you at risk; get help from a teacher or trusted adult immediately.",
+      "seekHelp": [
+        "Move to a safe place and find a teacher or trusted adult immediately.",
+        "Report the incident even if you were not the one who was hurt."
+      ],
+      "relatedLessons": [
+        "physical-video",
+        "intro"
+      ],
+      "relatedHandbook": "discipline"
+    },
+    {
+      "id": "cyberbullying",
+      "name": "Cyberbullying",
+      "tag": "Think before you click",
+      "colorClass": "topic-cyber",
+      "icon": "smartphone",
+      "cardText": "Think before you click.",
+      "definition": "Cyberbullying is hurtful or threatening behavior using digital tools such as social media, messaging apps, games, or online posts.",
+      "examples": [
+        "Sending repeated hurtful or threatening messages.",
+        "Posting embarrassing photos or videos without permission.",
+        "Excluding someone from group chats to hurt them."
+      ],
+      "signs": "Repeated hurtful messages, humiliating posts, targeted group chats, threats, or sharing private content without permission.",
+      "effects": [
+        "Feeling anxious even at home because messages continue.",
+        "Feeling embarrassed or afraid to use social media.",
+        "Losing sleep, focus, or confidence."
+      ],
+      "prevention": "Pause before posting, protect personal information, use privacy tools, and never share content meant to embarrass another person.",
+      "responses": "Do not reply with more harm or forward the content. Save relevant evidence if safe, block or report the account, and tell a trusted adult.",
+      "seekHelp": [
+        "Tell a trusted adult and save evidence if it is safe to do so.",
+        "Use the block and report tools of the app or platform.",
+        "Ask the school office for help if classmates are involved."
+      ],
+      "relatedLessons": [
+        "online"
+      ],
+      "relatedHandbook": "prohibited"
+    },
+    {
+      "id": "social",
+      "name": "Social/Relational Bullying",
+      "tag": "Everyone belongs",
+      "colorClass": "topic-social",
+      "icon": "users",
+      "cardText": "Everyone deserves to belong.",
+      "definition": "Social or relational bullying tries to harm someone's friendships, belonging, or reputation.",
+      "examples": [
+        "Deliberately leaving someone out of group activities.",
+        "Spreading rumors to damage a classmate's reputation.",
+        "Pressuring others to stop being friends with someone."
+      ],
+      "signs": "Deliberately excluding a student to hurt them, spreading rumors, or pressuring a group to turn against someone.",
+      "effects": [
+        "Feeling isolated or unwanted.",
+        "Losing friendships and trust.",
+        "Feeling sad or withdrawn at school."
+      ],
+      "prevention": "Include others, check whether information is true before repeating it, and respect people's right to choose their friends.",
+      "responses": "Be welcoming without escalating the conflict. Do not spread rumors, and tell a trusted adult when it continues or causes harm.",
+      "seekHelp": [
+        "Talk to a trusted adult about what you noticed.",
+        "Invite the person to join safe school activities."
+      ],
+      "relatedLessons": [
+        "social-video",
+        "bystander"
+      ],
+      "relatedHandbook": "behavior"
+    },
+    {
+      "id": "emotional",
+      "name": "Psychological/Emotional Bullying",
+      "tag": "Care for feelings",
+      "colorClass": "topic-emotional",
+      "icon": "heart",
+      "cardText": "Be kind to the mind and heart.",
+      "definition": "Psychological or emotional bullying involves repeated harmful behavior that makes a person feel afraid, ashamed, pressured, or isolated.",
+      "examples": [
+        "Repeated intimidation or humiliation.",
+        "Pressuring someone through threats or coercion.",
+        "Making someone feel worthless on purpose."
+      ],
+      "signs": "Repeated intimidation, humiliation, coercion, threats, or behavior intended to make someone feel worthless or unsafe.",
+      "effects": [
+        "Constant worry, fear, or shame.",
+        "Difficulty concentrating in class.",
+        "Feeling unsafe or alone."
+      ],
+      "prevention": "Treat people with dignity, respect boundaries, and take concerns seriously even when there are no visible injuries.",
+      "responses": "Listen without blaming the person. Encourage them to talk to a trusted adult and seek support if they feel worried or unsafe.",
+      "seekHelp": [
+        "Tell a trusted adult; emotional harm is real harm.",
+        "Ask the Guidance Office about available support."
+      ],
+      "relatedLessons": [
+        "emotional-video",
+        "intro",
+        "bystander"
+      ],
+      "relatedHandbook": "bullying-policy"
+    }
+  ]
+}

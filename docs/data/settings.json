@@ -1,0 +1,17 @@
+{
+  "$schema": "ebsafe.settings/v1",
+  "schoolName": "Leonor M. Bautista National High School",
+  "schoolShortName": "LMBNHS",
+  "systemName": "e B-SAFE",
+  "systemFullName": "Electronic Bullying Safety and Awareness System",
+  "logoPath": "assets/school-logo.jpg",
+  "heroImagePath": "assets/hero-school.jpg",
+  "gradeFocus": "Grade 7",
+  "features": {
+    "awarenessSurvey": true,
+    "websiteEvaluation": true,
+    "localProgress": true,
+    "studentReportingForm": true
+  },
+  "apiBaseUrl": ""
+}

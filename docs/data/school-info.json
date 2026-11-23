@@ -1,0 +1,200 @@
+{
+  "$schema": "ebsafe.school-info/v1",
+  "schoolName": "Leonor M. Bautista National High School",
+  "schoolShortName": "LMBNHS",
+  "address": "Purok Labne, Pias, General Tinio, Nueva Ecija",
+  "facebookPage": "",
+  "email": "",
+  "dailySchedule": [
+    "7:30 am – 11:45 am",
+    "1:00 pm – 5:00 pm"
+  ],
+  "officeHours": [
+    "8:00 am – 12:00 noon",
+    "1:00 pm – 5:00 pm"
+  ],
+  "objectives": [
+    "Engage learning experiences that will provide learners the opportunity, training inspiration to develop and practices discipline, proper values and desirable social behavior.",
+    "Provide safety atmosphere to develop learner growth in a positive direction.",
+    "Develop a code that is progressive in nature follows legal due process where learners must comply in terms of their conduct.",
+    "Produce graduates who have acquired the skills and knowledge necessary to become responsible and productive learners."
+  ],
+  "contacts": {
+    "guidanceOffice": "",
+    "guidanceOfficePlaceholder": "Official school contact details to be verified before publishing",
+    "verified": false
+  },
+  "reporting": {
+    "eyebrow": "You deserve to feel safe",
+    "title": "Need help? You are not alone.",
+    "intro": "If you experience or witness bullying, speak with a trusted adult or follow your school's approved reporting process. You do not need to solve it by yourself.",
+    "steps": [
+      {
+        "title": "Find a trusted adult",
+        "text": "Guidance counselor, class adviser, parent, or school administrator."
+      },
+      {
+        "title": "Explain what happened",
+        "text": "Share what you know, when it happened, and where it happened if you feel safe to do so."
+      },
+      {
+        "title": "Ask what happens next",
+        "text": "Ask about the next steps and how to get support."
+      }
+    ],
+    "sideTitle": "Asking for help is a strong step.",
+    "sideText": "Every student deserves respect, safety, and support.",
+    "contactTitle": "School support contact",
+    "contactNote": "Ask the school admin to add the official Guidance Office contact.",
+    "trustedAdultTitle": "Trusted adult",
+    "trustedAdultNote": "Speak with an adult you trust if you feel unsafe or worried.",
+    "privacyNote": "The demo form does not send reports to school staff. Confirm the school's official reporting contacts and secure handling before launch."
+  },
+  "study": {
+    "title": "About the Study / Statement of the Problem",
+    "projectTitle": "e B-SAFE — Electronic Bullying Safety and Awareness System",
+    "schoolName": "Leonor M. Bautista National High School",
+    "chapterLabel": "Chapter 1",
+    "chapterTitle": "Introduction and Review of Related Studies",
+    "background": [
+      "Bullying is a common problem in different schools, and it can affect students in different ways. It may involve repeated actions that hurt, embarrass, or threaten others. Bullying awareness is important because students, teachers, parents, and school administrators, especially students aged 13-17, need to understand the different forms of bullying. The World Health Organization (WHO) notes that experiencing bullying is associated with negative effects on adolescents' health, particularly their well-being. Our study highlights the importance of making students aware of their actions so they can understand whether their behavior toward others is right or wrong. It also emphasizes the importance of respecting one another and helping build a safe and supportive school environment.",
+      "Although schools continue to promote how to be kind and respectful, some students still experience bullying from their classmates and friends. Students who are frequently bullied experience emotional distress and sometimes even refuse to attend school. Therefore, our group is promoting how young people can be aware of their actions and what happens to them if they are bullied. The \"Bully-Victim\" Complexity: A significant portion of bullies also report being victims themselves. (Bäker et al. 2023) found that bullying is linked to emotional dysregulation and peer alienation among adolescents, showing that bully-victims may experience emotional and social difficulties. And we can be sure that the website we will create will reduce the number of students who are bullied, and to promote greater awareness and understanding of bullying behaviors, particularly among individuals who engage in bullying or witness such acts, specially those aged 13-17. Although bullying seems to be natural in the Philippines because we have experienced it before, until now it is just like the murders that have happened because they are bullied, they are able to kill. That is one of the problems facing many schools in the Philippines, so we will create bullying Awareness so that the problems faced by students, teachers, and many schools can be reduced.",
+      "Our school, Leonor M. Bautista (LMBNHS), is also grappling with severe bullying. Students in Grade 7, in particular, are frequently targeted; the bullying which occurs both physically and via social media causes them significant insecurity. Anonymity and 24/7 Accessibility: Unlike traditional bullying, which typically halts outside of school hours, cyberbullying follows victims into their homes via smartphones and social platforms. (Wang et al. 2024) found that online disinhibition may increase cyberbullying because anonymity can reduce accountability and encourage harmful behavior. They face serious threats to their safety. Therefore, it is crucial for students to learn how to avoid bullying and understand the impact of our Bullying Awareness initiative; this program will serve as a guide as they grow up and is vital for their well-being and future.",
+      "The literature reviewed shows that bullying is a common problem among students and can negatively affect their emotional well-being, academic performance, and willingness to attend school. Although many studies have discussed the different forms and effects of bullying, there is still a need to increase students' awareness and understanding of how bullying can be prevented and addressed in their school environment. Therefore, this study aims to assess bullying awareness among students and determine their understanding of its different forms, effects, and prevention. This study is significant because it may help students, teachers, parents, and school administrators develop better awareness and strategies to prevent bullying and create a safer and more supportive school environment."
+    ],
+    "objective": [
+      "The aim of this study is to reduce bullying in school and increase students' knowledge and awareness about bullying among their fellow students. In Leonor M. Bautista National High School, the researchers found that many students still lack knowledge about bullying and do not know the proper process for reporting this kind of incident. Through the program by the researchers, it would provide information and guidance to help students understand bullying and know what to do when they experience or witness it.",
+      "Ultimately, the study seeks to protect students from further harm, alleviate stress, and restore their self-confidence. By helping students understand how their words and actions impact others, the initiative encourages them to speak up against wrongdoing and treat their peers with respect and kindness. This will foster a safer, more credible, and supportive school environment where every student feels comfortable actively participating in school activities."
+    ],
+    "statementOfProblem": {
+      "intro": [
+        "The main objective of this study is to develop a Bullying Awareness System that will help students increase their knowledge and awareness about bullying, its prevention, and the proper process of reporting bullying incidents. The researchers aim to provide students with accessible information and guidance to help them recognize, prevent, and properly report bullying incidents in school."
+      ],
+      "lead": "Specifically, it aims to seek answers to the following areas of inquiry:",
+      "questions": [
+        {
+          "icon": "eye", "q": "A. Students' Awareness About Bullying",
+          "subs": [
+            "1.1 Understanding the Different Forms and Types of Bullying",
+            "1.2 Recognizing the Signs and Situations That Involve Bullying",
+            "1.3 Understanding the Effects of Bullying on Students",
+            "1.4 Properly Identifying and Recognizing Bullying Incidents"
+          ]
+        },
+        {
+          "icon": "shield-check", "q": "B. Information About Bullying Prevention",
+          "subs": [
+            "2.1 Learning Effective Ways to Prevent Bullying in School",
+            "2.2 Knowing the Proper Actions to Take When Witnessing Bullying",
+            "2.3 Promoting Respect, Kindness, and Understanding Among Students",
+            "2.4 Knowing Where and How to Seek Help for Bullying Problems",
+            "2.5 Following Safety Guidelines to Protect Students from Bullying"
+          ]
+        },
+        {
+          "icon": "flag", "q": "C. Information About the Proper Reporting of Bullying Incidents",
+          "subs": [
+            "3.1 Knowing the Right Persons or School Authorities to Report Bullying To",
+            "3.2 Understanding the Important Information Needed When Reporting Bullying",
+            "3.3 Learning the Proper Steps in Reporting a Bullying Incident",
+            "3.4 Knowing Where to Ask for Help and Assistance Regarding Bullying",
+            "3.5 Proper Actions to Take After Reporting Bullying"
+          ]
+        },
+        {
+          "icon": "search", "q": "D. Convenient Access to Information",
+          "subs": [
+            "4.1 Ease of Navigating and Moving Between Different Pages of the System",
+            "4.2 Ease of Accessing and Reading Bullying-Related Information",
+            "4.3 Clear and Organized Arrangement of Information and Content",
+            "4.4 Ease of Searching for and Finding Specific Information in the System"
+          ]
+        },
+        {
+          "icon": "smile", "q": "E. Grade 7 Students' Satisfaction with the System",
+          "subs": [
+            "5.1 Ease of Use and Understanding of the System by Grade 7 Students",
+            "5.2 Proper Functioning of the System's Features and Tools",
+            "5.3 Clarity and Understandability of the Information Provided",
+            "5.4 Usefulness of the System in Learning About Bullying and Its Prevention",
+            "5.5 Overall Ease of Use, Performance, and User Satisfaction with the System"
+          ]
+        }
+      ],
+      "note": "The indicators below follow the revised instrument wording, grouped by area (A–E). The school should verify the final wording before publication."
+    },
+    "scope": "A researcher creates a web page about bullying awareness for students who experience bullying and unaware of it. This focuses to help students be aware and understand what bullying and the effect of bullying are. This web page would also help teachers since it would reduce the stress of taking accountability of students. The web page will be used by students from Leonor M. Bautista. This also help students avoid bullying by increasing awareness through bullying and its effects on others. The researcher had conducted a survey among grade 7 students. And five (5) students from each section are selected as respondents",
+    "significance": [
+      {
+        "who": "Students",
+        "text": "This study will help students become more aware of their actions and words and avoid doing things that may hurt others."
+      },
+      {
+        "who": "Teachers",
+        "text": "This study will help teachers better understand issues related to bullying and provide proper guidance to students."
+      },
+      {
+        "who": "School",
+        "text": "This study will help strengthen awareness about bullying and promote a safer and more positive environment for students."
+      },
+      {
+        "who": "Researchers",
+        "text": "This study will provide additional knowledge and experience in conducting research about bullying and developing an awareness system."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Adolescent",
+        "definition": "A young person between childhood and adulthood."
+      },
+      {
+        "term": "Anonymity",
+        "definition": "Being unknown or having your identity hidden."
+      },
+      {
+        "term": "Chronic",
+        "definition": "Lasting for a long time."
+      },
+      {
+        "term": "Complexity",
+        "definition": "The state of being complicated or having many parts."
+      },
+      {
+        "term": "Disinhibits",
+        "definition": "Make someone less careful or less controlled in their actions or words."
+      },
+      {
+        "term": "Emotional dysregulation",
+        "definition": "Difficulty controlling or managing emotions."
+      },
+      {
+        "term": "Grappling",
+        "definition": "Trying hard to deal with or understand something difficult."
+      },
+      {
+        "term": "Harshest",
+        "definition": "More severe, strict or unpleasant."
+      },
+      {
+        "term": "Longitudinal",
+        "definition": "Studying or observing something over a long period of time."
+      },
+      {
+        "term": "Perpetrators",
+        "definition": "People who commit a harmful or wrong action."
+      },
+      {
+        "term": "Psychological scars",
+        "definition": "Lasting emotional or mental effects from a painful experience."
+      },
+      {
+        "term": "Social alienation",
+        "definition": "Feeling separated, alone, or disconnected from others."
+      },
+      {
+        "term": "24/7 Accessibility",
+        "definition": "Being available or reachable at any time."
+      }
+    ]
+  }
+}

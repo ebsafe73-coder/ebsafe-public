@@ -1,0 +1,635 @@
+{
+  "$schema": "ebsafe.handbook/v1",
+  "note": "Pages transcribed from the printed student handbook provided by the school. The school must verify and approve the wording before publication.",
+  "pages": [
+    {
+      "id": "foreword",
+      "cardLabel": "Foreword",
+      "cardNote": "Welcome message from the student handbook",
+      "iconClass": "icon-green",
+      "icon": "file-text",
+      "title": "Foreword",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Foreword"
+        },
+        {
+          "type": "paragraph",
+          "text": "This handbook provides information regarding learner's involvement in the curricular, co-curricular and extra-curricular activities of the school. It serves as resource document of the policies, rules and guidelines of the school for any causes of action and decisions. This will clarity of action and decisions. This will clarify the relations among learners as well as the administration, faculty and staff. This handbook also includes information about the school, its services and facilities that the learners can avail. Through this, the learners will be properly guided and made aware of these responsibilities and obligation; as well as understand their commitment to the administration for their well-being."
+        },
+        {
+          "type": "paragraph",
+          "text": "To you learners welcome to Leonor M. Bautista National High School. You are all encouraged to study and enjoy the opportunities offered to you by this institution."
+        }
+      ]
+    },
+    {
+      "id": "mission",
+      "cardLabel": "Mission, Vision & Core Values",
+      "cardNote": "DepEd vision, mission, and core values",
+      "iconClass": "icon-green",
+      "icon": "sparkles",
+      "title": "Mission, Vision & Core Values",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Department of Education"
+        },
+        {
+          "type": "subtitle",
+          "text": "Mission, Vision, and Core Values"
+        },
+        {
+          "type": "label",
+          "text": "DepEd Vision"
+        },
+        {
+          "type": "paragraph",
+          "text": "We dream of Filipinos who passionately love their country and whose values and competencies enable them to realize their full potential and contribute meaningfully to building the nation."
+        },
+        {
+          "type": "paragraph",
+          "text": "As a learner-centered public institution, the Department of Education continuously improves itself to better serve its stakeholders."
+        },
+        {
+          "type": "label",
+          "text": "II. DepEd Mission"
+        },
+        {
+          "type": "paragraph",
+          "text": "To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:"
+        },
+        {
+          "type": "objectives",
+          "items": [
+            "Learners learn in a child-friendly, gender-sensitive, safe, and motivating environment.",
+            "Teachers facilitate learning and constantly nurture every learner.",
+            "Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.",
+            "Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Our Core Values"
+        },
+        {
+          "type": "list",
+          "kind": "values",
+          "items": [
+            "MakaDiyos",
+            "Makatao",
+            "Makakalikasan",
+            "Makabansa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "school-info",
+      "cardLabel": "All About LMBNHS",
+      "cardNote": "School details, class schedule, and objectives",
+      "iconClass": "icon-blue",
+      "icon": "school",
+      "title": "All About LMBNHS",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "subtitle",
+          "text": "All about Leonor M. Bautista National High School"
+        },
+        {
+          "type": "fields",
+          "items": [
+            {
+              "label": "Name of School:",
+              "value": "LEONOR M. BAUTISTA NATIONAL HIGH SCHOOL"
+            },
+            {
+              "label": "Address:",
+              "value": "Purok Labne, Pias, General Tinio, Nueva Ecija"
+            },
+            {
+              "label": "Facebook Page:",
+              "blank": true
+            },
+            {
+              "label": "Email Address:",
+              "blank": true
+            },
+            {
+              "label": "Daily Schedule of Classes:",
+              "stack": [
+                "7:30 am – 11:45 am",
+                "1:00 pm – 5:00 pm"
+              ]
+            },
+            {
+              "label": "Office Hours:",
+              "stack": [
+                "8:00 am – 12:00 noon",
+                "1:00 pm – 5:00 pm"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Objectives:"
+        },
+        {
+          "type": "objectives",
+          "items": [
+            "Engage learning experiences that will provide learners the opportunity, training inspiration to develop and practices discipline, proper values and desirable social behavior.",
+            "Provide safety atmosphere to develop learner growth in a positive direction.",
+            "Develop a code that is progressive in nature follows legal due process where learners must comply in terms of their conduct.",
+            "Produce graduates who have acquired the skills and knowledge necessary to become responsible and productive learners."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admission",
+      "cardLabel": "Admission & Enrollment",
+      "cardNote": "No collection policy and admission process",
+      "iconClass": "icon-blue",
+      "icon": "clipboard-list",
+      "title": "Admission & Enrollment",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Admission and Transfer Policy"
+        },
+        {
+          "type": "list",
+          "kind": "ordered",
+          "items": [
+            "\"NO COLLECTION POLICY\"",
+            "The School adheres to the DepEd No Collection Policy which means no money shall be collected during enrollment period.",
+            {
+              "kind": "alpha",
+              "text": "However, DepEd allows authorized collection for the following:",
+              "items": [
+                "School paper",
+                "BSP/GSP",
+                "Red Cross",
+                "Athletics",
+                "PTA membership",
+                "SSG Fund"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Admission Process: for Junior High School"
+        },
+        {
+          "type": "list",
+          "kind": "ordered",
+          "items": [
+            "Grade 7 are encouraged to register in the scheduled Early Registration date. Grade 8 to Grade 10 are considered pre-registered.",
+            {
+              "text": "The following are required documents upon enrollment:",
+              "items": [
+                "SF 9 (Report Card)",
+                "PSA Birth Certificate",
+                "Certificate of Good Moral Character or Anecdotal Record for new learners",
+                "2X2 picture (2 copies)"
+              ]
+            },
+            "The permanent records (SF 10) of all incoming learners shall be secured before the end of first grading period (D.O. 54, s. 2016) by the class adviser."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "behavior",
+      "cardLabel": "Behavior & Conduct",
+      "cardNote": "Classroom conduct rules for learners",
+      "iconClass": "icon-lilac",
+      "icon": "heart-handshake",
+      "title": "Behavior & Conduct",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Behavior"
+        },
+        {
+          "type": "list",
+          "kind": "ordered",
+          "items": [
+            "Silence and order shall be maintained at all times in entering and leaving the classroom.",
+            "During class hours, learners shall always be attentive and cooperative refrain from doing things not connected with the whole class or lesson.",
+            "As a sign of respect, learners shall rise when called upon to recite or when propounding questions to the teachers.",
+            "Learners waiting to occupy a classroom shall enter only after the outgoing class has left the room.",
+            "Learners may leave the classroom only upon permission of the teacher.",
+            "Learners shall not eat in classroom only upon permission of the teacher.",
+            "Learners shall not cheat or commit any form of dishonesty in relation to their studies.",
+            "Learners shall keep the classroom clean and free from litter.",
+            "Loitering or creating any disturbance in the corridors or passageway is strictly prohibited.",
+            "Stairways and corridor shall be kept clean and clear for passage at all times.",
+            "Learners shall keep to the right when walking in the corridors and stairway.",
+            "Learners shall refrain from making unnecessary noise nor causing commotion of any kind or leave the hall during function.",
+            "Learners shall attend social function in clothing appropriate for the occasion and behave properly during school programs.",
+            "Learners shall refrain from using language and committing acts that are disrespectful, vulgar, or which in any manner may cause or tend to disturb other learners, faculty members and employees."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prohibited",
+      "cardLabel": "Alcoholism & Prohibited Acts",
+      "cardNote": "Rules on prohibited acts and offenses",
+      "iconClass": "icon-rose",
+      "icon": "ban",
+      "title": "Alcoholism & Prohibited Acts",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Alcoholism"
+        },
+        {
+          "type": "list",
+          "kind": "ordered",
+          "start": 4,
+          "items": [
+            "Learners shall not bring to school objects and pictures which are morally offensive or subversive.",
+            "Committing or inciting others common malicious damage in the personal property of a member of school, community or property owned by the school will not be tolerated.",
+            "Physical or verbal actions that leads to, or any may lead to violence are subject to disciplinary action.",
+            "Racist, sexist, derogatory, abusing or hanging behavior are not tolerated.",
+            "Any type of unwelcome conduct, verbal or non-verbal in the forms of demeaning slurs, name calling, gestures, or other words, and action relating to race, color, national origin, religion, gender, life style or handicap will result in disciplinary action,",
+            "Smoking in classroom and during academic function is prohibited.",
+            "There will be no smoking at any time in common areas and any building or on school property.",
+            {
+              "kind": "alpha",
+              "text": "Bullying are subject to disciplinary action",
+              "items": [
+                "Verbal Bullying",
+                "Physical Bullying",
+                "Cyber Bullying"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniform",
+      "cardLabel": "Uniform & School ID",
+      "cardNote": "Prescribed uniform, ID, and confiscation rules",
+      "iconClass": "icon-yellow",
+      "icon": "shirt",
+      "title": "Uniform & School ID",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Prescribed Uniform"
+        },
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "title": "Junior High School",
+              "groups": [
+                {
+                  "label": "For Boys:",
+                  "items": [
+                    "White shirt sleeve polo",
+                    "Black long pants",
+                    "Black shoes",
+                    "School ID",
+                    "Short clean haircut",
+                    "*Earrings and dyed are strictly prohibited"
+                  ]
+                },
+                {
+                  "label": "For Girls:",
+                  "items": [
+                    "White blouse with collar",
+                    "Maroon Checkered Skirt",
+                    "Black shoes",
+                    "School ID",
+                    "*Any hair style provided that:",
+                    "Bangs should be cut above the eyebrows",
+                    "Side if they are long, should be held by clips in place",
+                    "wearing of two or more earrings are prohibited"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Senior High School",
+              "groups": [
+                {
+                  "label": "For Boys:",
+                  "items": [
+                    "White shirt sleeve polo",
+                    "Maroon long pants",
+                    "Black shoes",
+                    "School ID",
+                    "Short clean haircut",
+                    "*Earrings and dyed are strictly prohibited"
+                  ]
+                },
+                {
+                  "label": "For Girls:",
+                  "items": [
+                    "Cream blouse with collar",
+                    "Maroon Skirt",
+                    "Black shoes",
+                    "School ID",
+                    "*Any hair style provided that:",
+                    "Bangs should be cut above the eyebrows",
+                    "Side if they are long, be held by clips in place",
+                    "wearing of two or more earrings are prohibited"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "labelParagraph",
+          "label": "Note:",
+          "text": "Improper use of ID will be confiscated."
+        },
+        {
+          "type": "label",
+          "text": "Claiming Confiscated ID's:"
+        },
+        {
+          "type": "paragraph",
+          "lines": [
+            "Claim from the guidance office only to the following schedule.",
+            "1:00-2:00 pm (Monday to Friday)"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Applying for Replacement of Lost ID's:"
+        },
+        {
+          "type": "objectives",
+          "items": [
+            "Request at the guidance office.",
+            "Bring (1 x 1) latest picture in uniform"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "discipline",
+      "cardLabel": "Disciplinary Measures",
+      "cardNote": "School offenses and corresponding sanctions",
+      "iconClass": "icon-peach",
+      "icon": "gavel",
+      "title": "Disciplinary Measures",
+      "status": "transcribed",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Disciplinary Measures for School Offenses"
+        },
+        {
+          "type": "list",
+          "kind": "ordered",
+          "items": [
+            {
+              "text": "Habitual non-conformity to ID and uniform regulations:",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension"
+              ]
+            },
+            {
+              "text": "Tardiness / cutting classes",
+              "items": [
+                {
+                  "text": "1st offence for three consecutive times:",
+                  "items": [
+                    "1st written warning sent to parents"
+                  ]
+                },
+                {
+                  "text": "2nd offence fourth time following first three times:",
+                  "items": [
+                    "2nd written warning sent to parents"
+                  ]
+                },
+                "3rd offence: automatically subjected to sanction agreed upon by subject teacher, adviser and Guidance Office"
+              ]
+            },
+            "Willful disregard of library regulations will meet disciplinary action.",
+            {
+              "text": "Cheating",
+              "items": [
+                {
+                  "text": "1st offence : referred to Guidance Office;",
+                  "items": [
+                    "Given failing grades on test / assignment; parent contact"
+                  ]
+                },
+                "2nd offence: withdrawn with a failing grade from the class affected by cheating; parent conference",
+                "3rd offence: long term suspension with loss of credit in all class"
+              ]
+            },
+            {
+              "text": "Boisterous conduct and any form of intimidation",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Direct physical assault upon faculty, personnel or any vested with authority.",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Acts of disrespect in words or in deed which intend to put any member of the administration in ridicule or contempt : gross misconduct / insubordination / willful disobedience.",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Direct physical assault upon a learner",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Deliberate disruption of academic functions or school activities through illegal assessments, demonstration, boycotts, or any action-related activities which tend to create public disorder.",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Stealing / tampering / forgery of records / receipts",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Gambling / playing cards inside the school campus.",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Immorality",
+              "items": [
+                "1st offence : with parents",
+                "2nd offence : 3-days suspension",
+                "3rd offence : 5-days suspension",
+                "4th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Vandalism destruction of school property.",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Carrying / possession of firearms , deadly weapons or explosive within the school premises.",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            },
+            {
+              "text": "Possession/ use of firecrackers inside the campus.",
+              "items": [
+                "1st offence : reprimand",
+                "2nd offence : with parents",
+                "3rd offence : 3-days suspension",
+                "4th offence : 5-days suspension",
+                "5th offence : dismissal"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Parents Involvement"
+        },
+        {
+          "type": "list",
+          "kind": "ordered",
+          "items": [
+            "Parents are now required to be a part of the discussion about how schools will help learners meet their academic performance standard.",
+            "Parents are welcome in the school and are encouraged to make a mutual convenient appointment with the teachers to discuss any area of concern.",
+            "It is the responsibility of parents to ensure that learners are in classes and to notify the school when the learners are absent."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Our main forms of communication to parents are:"
+        },
+        {
+          "type": "list",
+          "kind": "ordered",
+          "items": [
+            "Letter / phone call",
+            "Formal reports / SF9",
+            "Parent / teacher interview",
+            "Parent-teacher Association",
+            "Homeroom PTA meetings",
+            "School Orientation to parents"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attendance",
+      "cardLabel": "Attendance Policy",
+      "cardNote": "Attendance, tardiness, and absences",
+      "iconClass": "icon-peach",
+      "icon": "calendar-check",
+      "title": "Attendance Policy",
+      "status": "summary",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Students should attend classes and school-sponsored activities regularly and follow the school’s current attendance procedure."
+        },
+        {
+          "type": "list",
+          "kind": "plain",
+          "items": [
+            "The handbook discusses tardiness, admission slips, and contacting parents or guardians for repeated attendance concerns.",
+            "Absences should be explained using the school’s accepted procedure and documentation.",
+            "For an individual concern, speak with the class adviser or Guidance Office. Confirm all current rules with the school."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bullying-policy",
+      "cardLabel": "Anti-Bullying & Student Safety",
+      "cardNote": "School-approved safety and reporting policies",
+      "iconClass": "icon-rose",
+      "icon": "shield-check",
+      "title": "Anti-Bullying & Student Safety",
+      "status": "summary",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This section is reserved for the school’s verified anti-bullying policy and approved reporting process."
+        },
+        {
+          "type": "list",
+          "kind": "plain",
+          "items": [
+            "Identify the approved staff members and offices that receive bullying concerns.",
+            "Explain how students can report an incident and what support is available after reporting.",
+            "The school administrator must verify the official policy wording, contacts, and process before this section is published."
+          ]
+        }
+      ]
+    }
+  ]
+}

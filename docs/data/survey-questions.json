@@ -1,0 +1,186 @@
+{
+  "$schema": "ebsafe.survey/v1",
+  "awareness": {
+    "title": "Bullying Awareness Check",
+    "intro": "This is a short check of what you know about bullying. It is not a test and it is not graded. Answer honestly — this helps the researchers understand which topics need clearer lessons.",
+    "scale": [
+      {
+        "value": 1,
+        "label": "Strongly Disagree"
+      },
+      {
+        "value": 2,
+        "label": "Disagree"
+      },
+      {
+        "value": 3,
+        "label": "Neutral"
+      },
+      {
+        "value": 4,
+        "label": "Agree"
+      },
+      {
+        "value": 5,
+        "label": "Strongly Agree"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "forms",
+        "label": "Different forms of bullying",
+        "statements": [
+          "I can name different forms of bullying (verbal, physical, cyber, social, emotional).",
+          "I can tell the difference between bullying and a one-time disagreement."
+        ]
+      },
+      {
+        "id": "signs",
+        "label": "Signs and situations involving bullying",
+        "statements": [
+          "I can recognize signs that a classmate may be experiencing bullying.",
+          "I know common situations where bullying happens at school or online."
+        ]
+      },
+      {
+        "id": "effects",
+        "label": "Effects of bullying",
+        "statements": [
+          "I understand how bullying can affect a student's feelings and behavior.",
+          "I know that bullying can affect a student's studies and attendance."
+        ]
+      },
+      {
+        "id": "identification",
+        "label": "Proper identification of bullying incidents",
+        "statements": [
+          "I can tell when repeated harmful behavior is already bullying.",
+          "I can explain why power imbalance matters when identifying bullying."
+        ]
+      },
+      {
+        "id": "prevention",
+        "label": "Bullying prevention",
+        "statements": [
+          "I know ways to help prevent bullying in our school.",
+          "I know safe actions to take when I witness bullying."
+        ]
+      },
+      {
+        "id": "reporting",
+        "label": "Reporting procedures",
+        "statements": [
+          "I know whom to report a bullying incident to at school.",
+          "I know what information is helpful when reporting a bullying incident."
+        ]
+      }
+    ],
+    "experience": {
+      "id": "experience",
+      "label": "Optional: how often have you experienced or witnessed bullying at school or online?",
+      "options": [
+        "Never",
+        "Rarely",
+        "Sometimes",
+        "Often",
+        "Prefer not to answer"
+      ]
+    },
+    "privacyNote": "Your answers are stored in this browser. If your school has connected the results service, an anonymous summary is also sent to the school. Do not write names or private details about other students."
+  },
+  "evaluation": {
+    "title": "Website Evaluation",
+    "intro": "Rate your experience with the e B-SAFE website. This supports the study's usability evaluation.",
+    "scale": [
+      {
+        "value": 1,
+        "label": "Strongly Disagree"
+      },
+      {
+        "value": 2,
+        "label": "Disagree"
+      },
+      {
+        "value": 3,
+        "label": "Neutral"
+      },
+      {
+        "value": 4,
+        "label": "Agree"
+      },
+      {
+        "value": 5,
+        "label": "Strongly Agree"
+      }
+    ],
+    "criteria": [
+      {
+        "id": "friendly",
+        "text": "The website is easy to use."
+      },
+      {
+        "id": "functionality",
+        "text": "The buttons, pages, and learning activities work as expected."
+      },
+      {
+        "id": "clarity",
+        "text": "The bullying information is clear and easy to understand."
+      },
+      {
+        "id": "useful",
+        "text": "The website helps me learn about prevention and reporting."
+      },
+      {
+        "id": "overall",
+        "text": "Overall, I am satisfied with the e B-SAFE website."
+      }
+    ],
+    "note": "Ratings are stored in this browser only and can be exported as a JSON file. Usability ratings are kept separate from bullying reports."
+  },
+  "progress": {
+    "badges": [
+      {
+        "id": "first-lesson",
+        "label": "First Lesson Watched",
+        "icon": "circle-play",
+        "rule": "Watch at least one lesson."
+      },
+      {
+        "id": "all-lessons",
+        "label": "Lesson Explorer",
+        "icon": "target",
+        "rule": "Watch every published lesson."
+      },
+      {
+        "id": "quiz-starter",
+        "label": "Quiz Starter",
+        "icon": "pencil",
+        "rule": "Finish the awareness quiz once."
+      },
+      {
+        "id": "quiz-ace",
+        "label": "Quiz Ace",
+        "icon": "star",
+        "rule": "Score 100% on the awareness quiz."
+      },
+      {
+        "id": "awareness-check",
+        "label": "Awareness Check Done",
+        "icon": "check",
+        "rule": "Complete the awareness check."
+      },
+      {
+        "id": "pledge-keeper",
+        "label": "Pledge Keeper",
+        "icon": "heart",
+        "rule": "Tick every line of the Kindness Pledge."
+      },
+      {
+        "id": "course-complete",
+        "label": "e B-SAFE Graduate",
+        "icon": "award",
+        "rule": "Watch every lesson and score at least 70% on the awareness quiz."
+      }
+    ]
+  }
+}
