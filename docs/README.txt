@@ -26,7 +26,7 @@ NEW IN VERSION 1.1 (system improvement pass)
   section tags; the featured-video sun element had no styles; the un-loaded "Inter" font in
   the font stack; dead CSS rule.
 - Cache busting: styles.css and app.js are referenced with ?v= in index.html and
-  video.html (currently styles.css?v=42 and app.js?v=42). Bump the number of a file
+  video.html (currently styles.css?v=43 and app.js?v=42). Bump the number of a file
   whenever you deploy an edited CSS/JS file so browsers fetch the new version.
 
 NEW IN VERSION 1.8 (handbook reading pass)
