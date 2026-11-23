@@ -26,7 +26,7 @@ NEW IN VERSION 1.1 (system improvement pass)
   section tags; the featured-video sun element had no styles; the un-loaded "Inter" font in
   the font stack; dead CSS rule.
 - Cache busting: styles.css and app.js are referenced with ?v= in index.html and
-  video.html (currently styles.css?v=40 and app.js?v=40). Bump the number of a file
+  video.html (currently styles.css?v=41 and app.js?v=41). Bump the number of a file
   whenever you deploy an edited CSS/JS file so browsers fetch the new version.
 
 NEW IN VERSION 1.8 (handbook reading pass)
@@ -287,7 +287,8 @@ Current published video files in assets/videos/ (August 2026): physical-bullying
 (Physical Bullying lesson), social-bullying.mp4 (Social / Relational lesson),
 emotional-bullying.mp4 (Psychological / Emotional lesson). The other three lessons
 are text lessons in the "Read & learn" shelf; their page shows a read panel and a
-"Mark as read" button, never a fake play control. Videos never autoplay.
+"Mark as read" button. One visible homepage video can preview silently at a time. Previews advance
+in order and repeat. Open a lesson for the full player, sound, and learning progress.
 
 - Set "videoUrl" to one of:
   * A YouTube link (https://www.youtube.com/watch?v=... or https://youtu.be/...)

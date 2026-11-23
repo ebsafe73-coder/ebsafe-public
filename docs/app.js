@@ -390,12 +390,14 @@
     modal.classList.toggle('modal-wide', !!options.wide);
     backdrop.classList.remove('hidden');
     modal.classList.remove('hidden');
+    updateVideoPreview();
     document.body.style.overflow = 'hidden';
     modal.scrollTop = 0;
     $('#modalClose').focus();
   }
   function closeModal() {
     modal.classList.add('hidden');
+    updateVideoPreview();
     backdrop.classList.add('hidden');
     document.body.style.overflow = '';
     // Closing a dialog must not stop the lesson playing on the lesson page.
@@ -516,12 +518,11 @@
       <p class="privacy-note">${escapeHTML(apiBaseUrl() ? (info.liveNote || "Reports go to the school’s confidential inbox and are read by authorized staff only.") : (info.privacyNote || ''))}</p>`;
     const contact = (schoolInfo().contacts && schoolInfo().contacts.guidanceOffice) || '';
     const contactNote = contact || (schoolInfo().contacts && schoolInfo().contacts.guidanceOfficePlaceholder) || 'Official school contact details to be verified before publishing';
-    side.innerHTML = `<div class="report-side-badge">${iconHTML('life-buoy')}</div>
+    side.innerHTML = `<img class="section-art support-art" src="assets/illustrations/ask-for-help-960.jpg" srcset="assets/illustrations/ask-for-help-480.jpg 480w, assets/illustrations/ask-for-help-960.jpg 960w" sizes="(max-width: 639px) calc(100vw - 80px), (max-width: 980px) 580px, 40vw" width="960" height="640" alt="" loading="lazy" decoding="async">
       <h3>${escapeHTML(info.sideTitle || 'Asking for help is a strong step.')}</h3>
       <p>${escapeHTML(info.sideText || 'Every student deserves respect, safety, and support.')}</p>
       <div class="help-contact"><span class="contact-icon">${iconHTML('phone')}</span><div><strong>${escapeHTML(info.contactTitle || 'School support contact')}</strong><small>${escapeHTML(contactNote)}</small></div></div>
-      <div class="help-contact"><span class="contact-icon">${iconHTML('user-round')}</span><div><strong>${escapeHTML(info.trustedAdultTitle || 'Trusted adult')}</strong><small>${escapeHTML(info.trustedAdultNote || '')}</small></div></div>
-      <div class="contact-placeholder">${escapeHTML(contactNote)}</div>`;
+      <div class="help-contact"><span class="contact-icon">${iconHTML('user-round')}</span><div><strong>${escapeHTML(info.trustedAdultTitle || 'Trusted adult')}</strong><small>${escapeHTML(info.trustedAdultNote || '')}</small></div></div>`;
     $('#openReportForm').addEventListener('click', openReportForm);
   }
 
@@ -725,9 +726,8 @@
     const category = $('#featuredCategory');
     const duration = $('#featuredDuration');
     const watch = $('#featuredWatch');
-    const heroWatch = $('#watchFeaturedHero');
     const playable = list.filter(hasPlayableSource);
-    const featured = list.find(v => v.featured && hasPlayableSource(v))
+    const featured = playable.find(v => v.featured)
       || [...playable].sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || '')))[0]
       || null;
 
@@ -743,11 +743,6 @@
         watch.dataset.watch = textFeature ? textFeature.id : '';
         watch.setAttribute('href', textFeature ? `video.html?lesson=${encodeURIComponent(textFeature.id)}` : '#videos');
         watch.innerHTML = 'Read this lesson ' + iconHTML('arrow-right', 'inline-ico');
-      }
-      if (heroWatch) {
-        heroWatch.dataset.watch = textFeature ? textFeature.id : '';
-        heroWatch.setAttribute('href', textFeature ? `video.html?lesson=${encodeURIComponent(textFeature.id)}` : '#videos');
-        heroWatch.innerHTML = iconHTML('book-open', 'btn-ico') + 'Read the basics';
       }
       return;
     }
@@ -765,12 +760,7 @@
     if (watch) {
       watch.dataset.watch = featured.id;
       watch.setAttribute('href', `video.html?lesson=${encodeURIComponent(featured.id)}`);
-      watch.innerHTML = 'Watch this video ' + iconHTML('arrow-right', 'inline-ico');
-    }
-    if (heroWatch) {
-      heroWatch.dataset.watch = featured.id;
-      heroWatch.setAttribute('href', `video.html?lesson=${encodeURIComponent(featured.id)}`);
-      heroWatch.innerHTML = iconHTML('circle-play', 'btn-ico') + 'Watch featured video';
+      watch.innerHTML = 'Watch full lesson ' + iconHTML('arrow-right', 'inline-ico');
     }
     if (media) {
       media.querySelectorAll('img.featured-poster').forEach(img => img.remove());
@@ -785,6 +775,193 @@
         media.prepend(img);
       }
     }
+    return featured;
+  }
+
+  // The homepage uses one muted preview at a time. Full lessons own learning progress.
+  const PREVIEW_KEY = 'ebsafe_video_previews';
+  const storedPreviewPreference = safeRead(PREVIEW_KEY, null);
+  let previewPreference = typeof storedPreviewPreference === 'boolean' ? storedPreviewPreference : null;
+  const previewButtons = $$('[data-preview-toggle]');
+  const featuredPreviewHost = $('#featuredVideoImage');
+  const previewRail = $('#videoGrid');
+  const previewHosts = new Map();
+  const failedPreviewSources = new Set();
+  let featuredPreviewId = '';
+  let featuredPlaylist = [];
+  let currentPreview = null;
+  let optedInThisPage = false;
+  const previewThreshold = 0.55;
+  const reducedPreviewMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const previewsEnabled = () => previewPreference !== false
+    && (optedInThisPage || (!reducedPreviewMotion.matches && !navigator.connection?.saveData));
+
+  function previewSource(raw) {
+    if (!isDirectVideo(raw)) return '';
+    try {
+      const url = new URL(raw, document.baseURI);
+      return url.origin === location.origin ? safeHttpURL(url.href) : '';
+    } catch { return ''; }
+  }
+
+  function syncPreviewButtons() {
+    previewButtons.forEach(button => {
+      const enabled = previewsEnabled();
+      button.hidden = !previewHosts.size;
+      button.setAttribute('aria-pressed', String(enabled));
+      $('span', button).textContent = enabled ? 'On' : 'Off';
+    });
+  }
+
+  function stopVideoPreview() {
+    if (!currentPreview) return;
+    const { host, media } = currentPreview;
+    currentPreview = null;
+    media.pause();
+    media.removeAttribute('src');
+    media.load();
+    media.remove();
+    host.classList.remove('is-preview-active', 'is-preview-playing');
+  }
+
+  function nextPreview(items, currentIndex, canPlay) {
+    for (let offset = 1; offset <= items.length; offset++) {
+      const item = items[(currentIndex + offset) % items.length];
+      if (canPlay(item)) return item;
+    }
+    return null;
+  }
+
+  function advanceFeaturedPreview(entry) {
+    const index = featuredPlaylist.findIndex(item => item.lesson.id === entry.lessonId);
+    const next = nextPreview(featuredPlaylist, index, item => !failedPreviewSources.has(item.source));
+    if (!next) return;
+    featuredPreviewId = next.lesson.id;
+    entry.lessonId = next.lesson.id;
+    entry.source = next.source;
+    updateFeaturedHero([next.lesson]);
+  }
+
+  function nextShelfPreview(host) {
+    const hosts = [...previewHosts.keys()].filter(item => item !== featuredPreviewHost);
+    const next = nextPreview(hosts, hosts.indexOf(host), item => !failedPreviewSources.has(previewHosts.get(item).source));
+    if (!next || !previewRail) return null;
+    const entry = previewHosts.get(next);
+    if (entry.ratio >= previewThreshold) return next;
+    if (previewRail.contains(document.activeElement)) return null;
+    const bounds = previewRail.getBoundingClientRect();
+    const card = next.closest('.video-card');
+    previewRail.scrollLeft += card.getBoundingClientRect().left - bounds.left;
+    const clip = next.getBoundingClientRect();
+    const visibleWidth = Math.max(0, Math.min(bounds.right, clip.right, innerWidth) - Math.max(bounds.left, clip.left, 0));
+    const visibleHeight = Math.max(0, Math.min(clip.bottom, innerHeight) - Math.max(clip.top, 0));
+    entry.ratio = clip.width && clip.height ? visibleWidth * visibleHeight / (clip.width * clip.height) : 0;
+    return entry.ratio >= previewThreshold ? next : null;
+  }
+
+  function updateVideoPreview(preferredHost) {
+    if (!previewsEnabled() || document.hidden || !modal.classList.contains('hidden') || document.body.classList.contains('nav-open')) {
+      stopVideoPreview();
+      return;
+    }
+    const eligible = entry => entry && entry.ratio >= previewThreshold && !failedPreviewSources.has(entry.source);
+    const activeEntry = currentPreview && previewHosts.get(currentPreview.host);
+    if (activeEntry && eligible(activeEntry)) return;
+    stopVideoPreview();
+    const preferred = previewHosts.get(preferredHost);
+    const target = eligible(preferred)
+      ? [preferredHost, preferred]
+      : [...previewHosts].filter(([, entry]) => eligible(entry)).sort((a, b) => b[1].ratio - a[1].ratio)[0];
+    if (!target) return;
+    const [host, entry] = target;
+    const media = document.createElement('video');
+    media.className = 'lesson-preview';
+    media.width = 640;
+    media.height = 360;
+    media.muted = true;
+    media.defaultMuted = true;
+    media.playsInline = true;
+    media.preload = 'none';
+    media.setAttribute('aria-hidden', 'true');
+    media.tabIndex = -1;
+    currentPreview = { host, media };
+    const finish = failed => {
+      if (currentPreview?.media !== media) return;
+      if (failed) failedPreviewSources.add(entry.source);
+      stopVideoPreview();
+      if (host === featuredPreviewHost) {
+        advanceFeaturedPreview(entry);
+        updateVideoPreview(host);
+      } else {
+        updateVideoPreview(failed ? null : nextShelfPreview(host));
+      }
+    };
+    media.addEventListener('playing', () => {
+      if (currentPreview?.media === media) host.classList.add('is-preview-playing');
+    });
+    media.addEventListener('ended', () => finish(false), { once: true });
+    media.addEventListener('error', () => finish(true), { once: true });
+    media.src = entry.source;
+    host.prepend(media);
+    host.classList.add('is-preview-active');
+    media.play()?.catch(() => finish(true));
+  }
+
+  const previewObserver = 'IntersectionObserver' in window
+    ? new IntersectionObserver(entries => {
+      entries.forEach(({ target, intersectionRatio }) => {
+        const entry = previewHosts.get(target);
+        if (!entry) return;
+        entry.ratio = intersectionRatio;
+      });
+      updateVideoPreview();
+    }, { threshold: [0, previewThreshold, 0.8, 1] })
+    : null;
+
+  function registerVideoPreviews(featured, videoLessons, allLessons) {
+    if (!previewObserver) return;
+    const sources = new Map(videoLessons.map(lesson => [lesson.id, lesson.videoUrl]));
+    featuredPlaylist = allLessons.map(lesson => ({ lesson, source: previewSource(lesson.videoUrl) })).filter(item => item.source);
+    const targets = new Map();
+    if (featuredPreviewHost && featured) targets.set(featuredPreviewHost, { source: previewSource(featured.videoUrl), lessonId: featured.id });
+    if (previewRail) {
+      previewRail.classList.toggle('preview-rail', videoLessons.length > 1);
+      $$('.video-thumb', previewRail).forEach(host => targets.set(host, { source: previewSource(sources.get(host.dataset.watch)) }));
+    }
+    for (const [host, entry] of previewHosts) {
+      const next = targets.get(host);
+      if (next?.source === entry.source && next.lessonId === entry.lessonId) continue;
+      previewObserver.unobserve(host);
+      previewHosts.delete(host);
+    }
+    for (const [host, entry] of targets) {
+      if (!entry.source || previewHosts.has(host)) continue;
+      previewHosts.set(host, { ...entry, ratio: 0 });
+      previewObserver.observe(host);
+    }
+    syncPreviewButtons();
+    updateVideoPreview();
+  }
+
+  if (previewObserver) {
+    previewButtons.forEach(button => button.addEventListener('click', () => {
+      previewPreference = !previewsEnabled();
+      optedInThisPage = previewPreference;
+      safeWrite(PREVIEW_KEY, previewPreference);
+      if (previewPreference) failedPreviewSources.clear();
+      syncPreviewButtons();
+      updateVideoPreview();
+    }));
+    const syncPreferences = () => {
+      optedInThisPage = false;
+      syncPreviewButtons();
+      updateVideoPreview();
+    };
+    reducedPreviewMotion.addEventListener?.('change', syncPreferences);
+    navigator.connection?.addEventListener?.('change', syncPreferences);
+    document.addEventListener('visibilitychange', updateVideoPreview);
+    window.addEventListener('pagehide', stopVideoPreview);
+    window.addEventListener('pageshow', updateVideoPreview);
   }
 
   function renderLessonShelves() {
@@ -815,7 +992,7 @@
       const allRead = list.filter(lesson => !hasPlayableSource(lesson)).length;
       summary.textContent = `${allVideos} video${allVideos === 1 ? '' : 's'} and ${allRead} read lesson${allRead === 1 ? '' : 's'} for Grade 7.`;
     }
-    updateFeaturedHero(list);
+    registerVideoPreviews(updateFeaturedHero(list), videoLessons, list);
     return matching.length;
   }
 
@@ -1243,24 +1420,23 @@
     const text = String(video.duration || '').trim();
     return text || 'Lesson';
   }
-  function recCardHTML(video, current) {
+  function recCardHTML(video) {
     const progress = getProgress();
-    const isCurrent = current && video.id === current.id;
     const playable = hasPlayableSource(video);
     const resume = resumeFor(video.id);
     const topicName = lessonTopic(video);
     const meta = [video.category || 'Lesson', topicName && topicName !== video.category ? topicName : ''].filter(Boolean).join(' · ');
-    return `<article class="rec-card${isCurrent ? ' is-current' : ''}">
-      <button class="rec-thumb ${thumbClass(video)}${video.poster ? ' has-poster' : ''}" type="button" data-watch="${escapeHTML(video.id)}" aria-label="${isCurrent ? 'Currently playing: ' : playable ? 'Play ' : 'Read '}${escapeHTML(video.title)}"${isCurrent ? ' aria-current="true"' : ''}>
+    return `<article class="rec-card">
+      <button class="rec-thumb ${thumbClass(video)}${video.poster ? ' has-poster' : ''}" type="button" data-watch="${escapeHTML(video.id)}" aria-label="${playable ? 'Play ' : 'Read '}${escapeHTML(video.title)}">
         ${video.poster ? `<img src="${escapeHTML(video.poster)}" alt="" loading="lazy" decoding="async">` : `<span class="rec-symbol" aria-hidden="true">${thumbSymbol(video)}</span>`}
         <span class="rec-duration">${playable ? escapeHTML(durationLabel(video)) : 'Read'}</span>
-        ${isCurrent ? '<span class="rec-now">Now playing</span>' : (progress.completed[video.id] || progress.watched[video.id]) ? '<span class="rec-watched" aria-hidden="true">' + iconHTML('check') + '</span>' : ''}
-        ${resume && !isCurrent ? `<span class="rec-resume-bar" aria-hidden="true"><i style="width:${resumePercent(video.id, video)}%"></i></span>` : ''}
+        ${progress.completed[video.id] || progress.watched[video.id] ? '<span class="rec-watched" aria-hidden="true">' + iconHTML('check') + '</span>' : ''}
+        ${resume ? `<span class="rec-resume-bar" aria-hidden="true"><i style="width:${resumePercent(video.id, video)}%"></i></span>` : ''}
       </button>
       <div class="rec-copy">
         <button class="rec-title" type="button" data-watch="${escapeHTML(video.id)}">${escapeHTML(video.title)}</button>
         <p class="rec-meta">${escapeHTML(meta || 'Lesson')}</p>
-        ${resume && !isCurrent ? `<p class="rec-resume">Resume at ${formatClock(resume)}</p>` : ''}
+        ${resume ? `<p class="rec-resume">Resume at ${formatClock(resume)}</p>` : ''}
       </div>
     </article>`;
   }
@@ -1276,9 +1452,9 @@
       ? `<section class="watch-panel rec-panel-continue" aria-labelledby="continueHeading"><h2 class="watch-panel-title" id="continueHeading">Continue watching</h2>${continueList.map(l => `<button class="continue-row" type="button" data-watch="${escapeHTML(l.id)}"><span class="continue-row-copy"><strong>${escapeHTML(l.title)}</strong><small>Resume at ${formatClock(resumeFor(l.id))} · ${escapeHTML(l.category || 'Lesson')}</small></span><span class="continue-row-play" aria-hidden="true">${iconHTML('play', 'icon-solid')}</span></button>`).join('')}</section>`
       : '';
     const body = list.length
-      ? list.map(l => recCardHTML(l, video)).join('')
+      ? list.map(recCardHTML).join('')
       : `<div class="rec-empty"><strong>No other lessons yet</strong><p>When the school publishes more videos, they will show up here. For now, try the awareness quiz to check what you remember.</p><button class="btn btn-secondary btn-small" type="button" data-action="start-quiz">Take the quiz ${iconHTML('arrow-right', 'btn-ico')}</button></div>`;
-    const currentHTML = `<section class="watch-panel rec-panel-now" aria-labelledby="nowHeading"><h2 class="watch-panel-title" id="nowHeading">Now playing</h2>${recCardHTML(video, video)}</section>`;
+    const currentHTML = `<section class="watch-panel rec-panel-now" aria-labelledby="nowHeading"><h2 class="watch-panel-title" id="nowHeading">Current lesson</h2><p class="rec-current-title">${escapeHTML(video.title)}</p></section>`;
     return `${currentHTML}${continueHTML}<section class="watch-panel rec-panel" aria-labelledby="relatedHeading">
       <div class="rec-head"><h2 class="watch-panel-title" id="relatedHeading">Recommended lessons</h2><span class="rec-count">${list.length} lesson${list.length === 1 ? '' : 's'}</span></div>
       <div class="rec-list">${body}</div>
@@ -1314,7 +1490,6 @@
     const bookmarkButton = `<button class="bookmark-btn" type="button" data-bookmark="${escapeHTML(video.id)}" aria-pressed="${bookmarked}">${iconHTML('star', 'bm-ico')} ${bookmarked ? 'Saved' : 'Save lesson'}</button>`;
     const transcriptHTML = `<details class="transcript-box"><summary>Transcript</summary>${video.transcript ? `<p>${escapeHTML(video.transcript)}</p>` : '<p class="form-hint">No transcript yet for this lesson. The school can add one for this video.</p>'}${video.captionsPath ? '<p class="form-hint">Captions are available from the player controls.</p>' : ''}</details>`;
     const topic = matchTopic(video);
-    const topicChip = topic ? `<a class="watch-chip" href="index.html#awareness">${escapeHTML(topic.name)}</a>` : '';
     const related = relatedLessons(video, 1);
     const nextCandidate = related[0] || null;
     const nextButton = nextCandidate ? `<button class="btn btn-primary watch-next" type="button" data-watch="${escapeHTML(nextCandidate.id)}"><span class="watch-next-copy"><small>Up next</small><strong>${escapeHTML(nextCandidate.title)}</strong></span><span aria-hidden="true">${iconHTML('arrow-right', 'btn-ico')}</span></button>` : '';
@@ -1323,7 +1498,6 @@
       <div class="watch-player-shell">${buildPlayerHTML(video)}</div>
       <div class="watch-head">
         <div class="watch-head-copy">
-          <div class="watch-eyebrow"><span class="content-pill">Now playing</span>${topicChip}</div>
           <h1 class="watch-title">${escapeHTML(video.title)}</h1>
           <div class="video-meta watch-meta"><span>${iconHTML('clock', 'meta-ico')} ${escapeHTML(durationLabel(video))}</span><span>${iconHTML('badge-check', 'meta-ico')} ${escapeHTML(video.audience || 'Grade 7 friendly')}</span><span>${iconHTML('book-open', 'meta-ico')} ${escapeHTML(video.category || 'Lesson')}</span>${resume ? `<span class="watch-resume-note">↻ Resume at ${formatClock(resume)}</span>` : ''}</div>
         </div>
@@ -1780,7 +1954,7 @@
     if (!box) return;
     const groups = Array.isArray(extras().faq) ? extras().faq : [];
     box.innerHTML = groups.length
-      ? groups.map(group => `<h3 class="faq-group-title">${escapeHTML(group.group || '')}</h3>${(group.items || []).map(item => `<details class="faq-item"><summary>${escapeHTML(item.q || '')}</summary><p>${escapeHTML(item.a || '')}</p></details>`).join('')}`).join('')
+      ? groups.map(group => `<div class="faq-group"><h3 class="faq-group-title">${escapeHTML(group.group || '')}</h3>${(group.items || []).map(item => `<details class="faq-item"><summary>${escapeHTML(item.q || '')}</summary><p>${escapeHTML(item.a || '')}</p></details>`).join('')}</div>`).join('')
       : '<p class="form-hint">FAQ content is unavailable. Check data/extras.json.</p>';
   }
   function renderTip() {
@@ -2208,10 +2382,12 @@
   if (menuToggle) {
     const nav = $('#mainNav');
     const navBackdrop = $('#navBackdrop');
+    const wideNavigation = window.matchMedia('(min-width: 1024px)');
     const drawerOpen = () => nav.classList.contains('open');
     const setDrawer = open => {
       nav.classList.toggle('open', open);
       document.body.classList.toggle('nav-open', open);
+      updateVideoPreview();
       menuToggle.setAttribute('aria-expanded', String(open));
       menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
       if (navBackdrop) {
@@ -2229,7 +2405,7 @@
       if (open) {
         const first = $('.nav-link', nav);
         if (first) first.focus({ preventScroll: true });
-      } else if (nav.contains(document.activeElement)) {
+      } else if (!wideNavigation.matches && nav.contains(document.activeElement)) {
         menuToggle.focus({ preventScroll: true });
       }
     };
@@ -2238,11 +2414,9 @@
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && drawerOpen()) { event.preventDefault(); setDrawer(false); }
     });
-    if (window.matchMedia && window.matchMedia('(min-width: 851px)').addEventListener) {
-      window.matchMedia('(min-width: 851px)').addEventListener('change', event => {
-        if (event.matches && drawerOpen()) setDrawer(false);
-      });
-    }
+    wideNavigation.addEventListener?.('change', event => {
+      if (event.matches && drawerOpen()) setDrawer(false);
+    });
     $$('.nav-link').forEach(link => link.addEventListener('click', () => {
       $$('.nav-link').forEach(a => {
         const active = a.hash === link.hash;

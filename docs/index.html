@@ -8,7 +8,7 @@
   <title>e B-SAFE | Bullying Safety & Awareness</title>
   <link rel="icon" type="image/jpeg" href="assets/school-logo.jpg">
   <link rel="apple-touch-icon" href="assets/school-logo.jpg">
-  <link rel="stylesheet" href="styles.css?v=40">
+  <link rel="stylesheet" href="styles.css?v=41">
   <script>/* Pre-paint theme bootstrap: keeps the inline flash of the wrong theme away. Stored raw so this tiny script can read it. */(function(){try{var t=localStorage.getItem("ebsafe_theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark");}}catch(e){}})();</script>
 </head>
 <body class="student-home">
@@ -85,7 +85,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="announcement-bar">
     <span class="announcement-dot"></span>
-    <span>Kindness starts with us. Let's keep our school safe for everyone.</span>
+    <span>Help make school safer for everyone</span>
     <button class="text-button" id="dismissAnnouncement" aria-label="Dismiss announcement"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
   </div>
 
@@ -117,7 +117,7 @@
       </nav>
       <div class="header-utils">
         <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><svg class="theme-icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="theme-icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -127,15 +127,15 @@
 
     <section class="hero student-hero container section-anchor" id="home">
       <div class="hero-copy student-hero-copy">
-        <h1>Learn. Recognize.<br><span>Be kind.</span></h1>
-        <p>A safer school starts with you. Watch real school stories, learn the signs, and know how to get help.</p>
+        <h1>Spot bullying.<br>Get help.</h1>
+        <p>A Grade 7 guide to recognizing bullying through school stories and choosing a safe way to get help.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="video.html?lesson=emotional-video" id="watchFeaturedHero" data-watch="emotional-video"><svg class="btn-ico" aria-hidden="true"><use href="#i-circle-play"/></svg>Watch featured video</a>
-          <a class="btn btn-secondary" href="#videos" id="startLearning">Browse lessons</a>
+          <a class="btn btn-primary" href="#videos" id="startLearning">Browse lessons <svg class="btn-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn btn-secondary" href="#reporting">Get help</a>
         </div>
         <a class="start-here-card" id="startHereCard" href="video.html?lesson=intro" data-watch="intro">
           <span class="start-here-icon" aria-hidden="true"><svg><use href="#i-book-open"/></svg></span>
-          <span class="start-here-copy"><strong>New here? Start with the basics</strong><small>What is bullying? · Read lesson</small></span>
+          <span class="start-here-copy"><strong>What is bullying?</strong><small>Start with a reading lesson</small></span>
           <span class="start-here-arrow" aria-hidden="true"><svg><use href="#i-arrow-right"/></svg></span>
         </a>
       </div>
@@ -150,8 +150,10 @@
             <span class="content-pill" id="featuredCategory">Psychological / Emotional</span>
             <h2 id="featuredTitle">Psychological / Emotional Bullying</h2>
             <p id="featuredDescription">A short video on emotional harm and getting support.</p>
-            <div class="video-meta"><span><svg class="meta-ico" aria-hidden="true"><use href="#i-clock"/></svg><span id="featuredDuration">0:25</span></span><span><svg class="meta-ico" aria-hidden="true"><use href="#i-badge-check"/></svg>Grade 7 friendly</span></div>
-            <a class="hero-video-link" id="featuredWatch" href="video.html?lesson=emotional-video" data-watch="emotional-video">Watch this video <svg class="inline-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <div class="video-meta"><span><svg class="meta-ico" aria-hidden="true"><use href="#i-clock"/></svg><span id="featuredDuration">0:24</span></span></div>
+            <div class="video-preview-actions">
+              <a class="hero-video-link" id="featuredWatch" href="video.html?lesson=emotional-video" data-watch="emotional-video">Watch full lesson <svg class="inline-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            </div>
           </div>
         </div>
       </div>
@@ -172,23 +174,30 @@
     <section class="video-section section-anchor" id="videos">
       <div class="container">
         <div class="section-heading library-head">
-          <div><span class="eyebrow">Watch, read, practice</span><h2>Watch &amp; learn</h2><p id="librarySummary">Three short videos and three read lessons for Grade 7.</p></div>
+          <div><h2>Watch &amp; learn</h2><p id="librarySummary">Three short videos and three read lessons for Grade 7.</p></div>
           <div class="heading-actions"><button class="btn btn-secondary" id="openProgress" type="button">My progress</button></div>
         </div>
         <div class="library-tools">
-          <label class="search-box"><svg class="search-icon" aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="siteSearch" placeholder="Search lessons and topics..." aria-label="Search lessons and topics"></label>
+          <label class="search-box"><svg class="search-icon" aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="siteSearch" placeholder="Search lessons and topics" aria-label="Search lessons and topics"></label>
           <div class="filter-chips" id="lessonFilters" role="group" aria-label="Filter lessons by category"></div>
         </div>
-        <div class="shelf-head video-shelf-head"><h3>Videos</h3><span class="muted" id="videoCount"></span></div>
+        <div class="shelf-head video-shelf-head">
+          <div><h3>Videos</h3><span class="muted" id="videoCount"></span></div>
+        </div>
         <div class="video-grid" id="videoGrid"><p class="grid-loading">Loading video lessons…</p></div>
         <div class="shelf-head read-shelf-head"><div><h3>Read &amp; learn</h3><p>Reading lessons without a school-approved video yet.</p></div><span class="muted" id="readCount"></span></div>
         <div class="read-grid" id="readGrid"><p class="grid-loading">Loading read lessons…</p></div>
-        <p class="demo-note">Videos are school-approved and never autoplay. Read lessons are text-only until a video is added.</p>
       </div>
     </section>
 
     <section class="section container section-anchor" id="awareness">
-      <div class="section-heading"><div><span class="eyebrow">Learn to recognize it</span><h2>Explore bullying topics</h2><p>Understand the different forms bullying can take. Select a topic to learn more.</p></div><a class="btn btn-secondary btn-small" href="#videos">Find a lesson</a></div>
+      <div class="illustrated-intro">
+        <div class="section-heading">
+          <div><h2>Explore bullying topics</h2><p>Understand the different forms bullying can take. Select a topic to learn more.</p></div>
+          <a class="btn btn-secondary btn-small" href="#videos">Find a lesson</a>
+        </div>
+        <img class="section-art" src="assets/illustrations/notice-960.jpg" srcset="assets/illustrations/notice-480.jpg 480w, assets/illustrations/notice-960.jpg 960w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1264px) 53vw, 640px" width="960" height="640" alt="" loading="lazy" decoding="async">
+      </div>
       <div class="topic-grid" id="topicGrid"><p class="grid-loading">Loading topics…</p></div>
       <div class="no-results hidden" id="topicNoResults"><span class="no-results-icon" aria-hidden="true"><svg><use href="#i-search"/></svg></span><strong>No matching topics</strong><p>Try a different word, or clear the search box to see all five bullying topics again.</p></div>
     </section>
@@ -202,7 +211,7 @@
 
     <section class="container quick-check" id="quickCheck" aria-labelledby="quickCheckTitle">
       <div class="quick-check-icon" aria-hidden="true"><svg><use href="#i-circle-check"/></svg></div>
-      <div class="quick-check-copy"><span class="eyebrow">Check what you remember</span><h2 id="quickCheckTitle">Quick check</h2><p>Nine short questions about bullying awareness. Your best score stays in this browser.</p><p class="quick-check-best" id="quickCheckBest">No attempt yet.</p></div>
+      <div class="quick-check-copy"><h2 id="quickCheckTitle">Quick check</h2><p>Nine short questions about bullying awareness. Your best score stays in this browser.</p><p class="quick-check-best" id="quickCheckBest">No attempt yet.</p></div>
       <button class="btn btn-primary" id="featuredQuiz" type="button">Start quick check <svg class="btn-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
     </section>
 
@@ -213,11 +222,12 @@
     </section>
 
     <section class="section container section-anchor" id="prevention">
-      <div class="section-heading"><div><span class="eyebrow">Small actions matter</span><h2>What can you do?</h2><p>Choose a safe next step. You don't have to handle bullying alone.</p></div></div>
+      <div class="section-heading"><div><h2>What can you do?</h2><p>Choose a safe next step. You don't have to handle bullying alone.</p></div></div>
+      <img class="section-art prevention-art" src="assets/illustrations/include-others-960.jpg" srcset="assets/illustrations/include-others-480.jpg 480w, assets/illustrations/include-others-960.jpg 960w" sizes="(max-width: 1264px) calc(100vw - 40px), 1200px" width="960" height="640" alt="" loading="lazy" decoding="async">
       <div class="action-grid">
-        <article class="action-card"><div class="action-icon action-1"><svg aria-hidden="true"><use href="#i-eye"/></svg></div><span class="action-number">01</span><h3>Recognize it</h3><p>Notice repeated hurtful behavior, exclusion, threats, or harmful online activity.</p><button class="link-button" data-topic="Signs of Bullying">Explore signs <svg class="link-ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button></article>
-        <article class="action-card"><div class="action-icon action-2"><svg aria-hidden="true"><use href="#i-heart"/></svg></div><span class="action-number">02</span><h3>Support safely</h3><p>Be kind, include others, and avoid joining in or sharing hurtful content.</p><button class="link-button" data-topic="Supporting Others">Explore ways to help <svg class="link-ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button></article>
-        <article class="action-card"><div class="action-icon action-3"><svg aria-hidden="true"><use href="#i-message-circle"/></svg></div><span class="action-number">03</span><h3>Tell a trusted adult</h3><p>Reach out to a teacher, guidance counselor, parent, or school staff member.</p><a class="link-button" href="#reporting">Know how to report <svg class="link-ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></article>
+        <article class="action-card"><div class="action-icon action-1"><svg aria-hidden="true"><use href="#i-eye"/></svg></div><h3>Recognize it</h3><p>Notice repeated hurtful behavior, exclusion, threats, or harmful online activity.</p><button class="link-button" data-topic="Signs of Bullying">Explore signs <svg class="link-ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button></article>
+        <article class="action-card"><div class="action-icon action-2"><svg aria-hidden="true"><use href="#i-heart"/></svg></div><h3>Support safely</h3><p>Be kind, include others, and avoid joining in or sharing hurtful content.</p><button class="link-button" data-topic="Supporting Others">Explore ways to help <svg class="link-ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button></article>
+        <article class="action-card"><div class="action-icon action-3"><svg aria-hidden="true"><use href="#i-message-circle"/></svg></div><h3>Tell a trusted adult</h3><p>Reach out to a teacher, guidance counselor, parent, or school staff member.</p><a class="link-button" href="#reporting">Know how to report <svg class="link-ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></article>
       </div>
       <details class="practice-details">
         <summary>Practice scenarios and myth vs. fact</summary>
@@ -236,7 +246,7 @@
     </section>
 
     <section class="container more-section" aria-labelledby="moreTitle">
-      <div class="section-heading"><div><span class="eyebrow">More for students</span><h2 id="moreTitle">School, pledge and research</h2><p>Important school information and ways to get involved.</p></div></div>
+      <div class="section-heading"><div><h2 id="moreTitle">School, pledge and research</h2><p>Important school information and ways to get involved.</p></div></div>
       <div class="more-grid">
         <a class="more-card" href="#handbook"><span class="more-icon" aria-hidden="true"><svg><use href="#i-book-open"/></svg></span><span class="more-copy"><strong>School handbook</strong><small>Uniform, conduct, attendance and school information</small></span><span class="more-arrow" aria-hidden="true"><svg><use href="#i-arrow-right"/></svg></span></a>
         <a class="more-card" href="#about"><span class="more-icon" aria-hidden="true"><svg><use href="#i-school"/></svg></span><span class="more-copy"><strong>About the study</strong><small>Why e B-SAFE exists and the research behind it</small></span><span class="more-arrow" aria-hidden="true"><svg><use href="#i-arrow-right"/></svg></span></a>
@@ -246,22 +256,22 @@
     </section>
 
     <section class="section container section-anchor secondary-section" id="handbook">
-      <div class="section-heading"><div><span class="eyebrow">Your school, your guide</span><h2>School handbook</h2><p>Quick access to key information from the school handbook provided for e B-SAFE.</p></div><span class="handbook-stamp">LMBNHS<br><small>Student guide</small></span></div>
+      <div class="section-heading"><div><h2>School handbook</h2><p>Quick access to key information from the school handbook provided for e B-SAFE.</p></div><span class="handbook-stamp">LMBNHS<br><small>Student guide</small></span></div>
       <div class="handbook-grid" id="handbookGrid"><p class="grid-loading">Loading handbook…</p></div>
       <p class="demo-note">The handbook pages shown here (Foreword, DepEd mission and core values, school information, admission, behavior, prohibited acts, uniform, and disciplinary measures) are transcribed from the printed student handbook. The school should still verify and approve the exact wording before publication.</p>
     </section>
 
     <section class="study-section section-anchor secondary-section" id="about">
-      <div class="container study-layout"><div class="study-intro"><span class="eyebrow">About the study</span><h2>Why e B-SAFE?</h2><p>e B-SAFE is a proposed bullying-awareness website for Leonor M. Bautista National High School. It aims to make learning resources, prevention strategies, reporting guidance, and school information easier for students to access.</p><div class="study-facts" id="studyFacts"></div><small class="fact-note">Facts are computed from the website content files.</small></div><div class="sop-card"><span class="content-pill" id="studyPill">Chapter 1</span><h3 id="studyTitle">Statement of the Problem</h3><div class="sop-statement" id="studyStatement"></div><div class="sop-questions" id="sopQuestions"></div><div class="sop-questions study-extra" id="studyExtra"></div><button class="btn btn-secondary btn-block" id="openSurvey" type="button">Open bullying awareness check <svg class="btn-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button><button class="btn btn-secondary btn-block" id="openEvaluation" type="button">Open website evaluation form <svg class="btn-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div></div>
+      <div class="container study-layout"><div class="study-intro"><h2>Why e B-SAFE?</h2><p>e B-SAFE is a proposed bullying-awareness website for Leonor M. Bautista National High School. It aims to make learning resources, prevention strategies, reporting guidance, and school information easier for students to access.</p><div class="study-facts" id="studyFacts"></div><small class="fact-note">Facts are computed from the website content files.</small></div><div class="sop-card"><span class="content-pill" id="studyPill">Chapter 1</span><h3 id="studyTitle">Statement of the Problem</h3><div class="sop-statement" id="studyStatement"></div><div class="sop-questions" id="sopQuestions"></div><div class="sop-questions study-extra" id="studyExtra"></div><button class="btn btn-secondary btn-block" id="openSurvey" type="button">Open bullying awareness check <svg class="btn-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button><button class="btn btn-secondary btn-block" id="openEvaluation" type="button">Open website evaluation form <svg class="btn-ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div></div>
     </section>
 
     <section class="section container section-anchor secondary-section" id="pledge">
-      <div class="section-heading"><div><span class="eyebrow">A promise to yourself and others</span><h2>Digital Kindness Pledge</h2><p>Read each line, tick the ones you promise to keep, then print or view your pledge card.</p></div></div>
+      <div class="section-heading"><div><h2>Digital Kindness Pledge</h2><p>Read each line, tick the ones you promise to keep, then print or view your pledge card.</p></div></div>
       <div class="pledge-card" id="pledgeCard"></div>
     </section>
 
     <section class="section container section-anchor secondary-section" id="faq">
-      <div class="section-heading"><div><span class="eyebrow">Questions students ask</span><h2>Frequently asked questions</h2><p>Short answers about bullying, asking for help, and using e B-SAFE.</p></div></div>
+      <div class="section-heading"><div><h2>Frequently asked questions</h2><p>Short answers about bullying, asking for help, and using e B-SAFE.</p></div></div>
       <div class="faq-list" id="faqList"></div>
     </section>
 
@@ -278,6 +288,6 @@
   <div id="printRoot" class="print-root" hidden></div>
   <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" hidden><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
   <div class="sr-only" id="liveRegion" role="status" aria-live="polite"></div>
-  <script src="app.js?v=40" defer></script>
+  <script src="app.js?v=41" defer></script>
 </body>
 </html>
