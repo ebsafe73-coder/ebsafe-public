@@ -723,7 +723,6 @@
     const play = $('#featuredPlay');
     const title = $('#featuredTitle');
     const description = $('#featuredDescription');
-    const category = $('#featuredCategory');
     const duration = $('#featuredDuration');
     const watch = $('#featuredWatch');
     const playable = list.filter(hasPlayableSource);
@@ -737,7 +736,6 @@
       const textFeature = list.find(v => v.featured) || list[0] || null;
       if (title) title.textContent = textFeature ? textFeature.title : 'Watch & learn';
       if (description) description.textContent = textFeature ? (textFeature.description || 'A reading lesson to start with.') : 'The lesson library is loading.';
-      if (category) category.textContent = textFeature ? (textFeature.category || 'Lesson') : 'Lesson';
       if (duration) duration.textContent = textFeature ? 'Read lesson' : '';
       if (watch) {
         watch.dataset.watch = textFeature ? textFeature.id : '';
@@ -755,7 +753,6 @@
     }
     if (title) title.textContent = featured.title;
     if (description) description.textContent = featured.description || featured.longDescription || '';
-    if (category) category.textContent = featured.category || 'Video lesson';
     if (duration) duration.textContent = durationLabel(featured);
     if (watch) {
       watch.dataset.watch = featured.id;

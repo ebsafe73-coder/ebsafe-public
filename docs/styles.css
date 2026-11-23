@@ -3652,7 +3652,6 @@ body.student-home .student-hero .start-here-card {
   margin-block-start: 20px;
   padding: 8px 0 !important;
   border: 0 !important;
-  border-block-start: 1px solid var(--line) !important;
   border-radius: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
